@@ -199,7 +199,7 @@ window.addEventListener("popstate", onPopState);
 //     }, 10);
 // }
 
-const text1 = `As a versatile developer with a passion for technology, I have a diverse range of skills that I bring to the table. I am a skilled backend developer with expertise in creating frontend applications, websites, and web scraping.`;
+const text1 = `With a wide range of expertise in security, backend, and frontend development, I possess a versatile skill set that allows me to create robust and secure applications while delivering exceptional user experiences.`;
 const text2 = `My ability to work seamlessly with teams has helped me to develop effective communication and collaboration skills, enabling me to contribute meaningfully to any project. I am also a quick learner, always eager to learn new technologies and improve my skills.`;
 const text3 = `
 In addition to my technical expertise, I am a detail-oriented individual who takes pride in delivering high-quality work. My commitment to excellence is reflected in my portfolio, which showcases my ability to create user-friendly, functional, and visually appealing applications.
