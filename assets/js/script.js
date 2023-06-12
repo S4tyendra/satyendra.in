@@ -110,8 +110,13 @@ for (let i = 0; i < navigationLinks.length; i++) {
                 navigationLinks[i].classList.add("active");
                 window.scrollTo(0, 0);
             } else {
-                pages[i].classList.remove("active");
-                navigationLinks[i].classList.remove("active");
+
+                try {
+                    pages[i].classList.remove("active");
+                    navigationLinks[i].classList.remove("active");
+                } catch (error) {
+                    console.log(error);
+                }
             }
         }
     });
@@ -135,15 +140,27 @@ function change(data) {
 }
 
 const onPopState = function (event) {
-    removeActive();
+    try {
+        removeActive();
+    } catch (error) {
+        
+    }
+
     const url = document.location.pathname;
     const clsnm = url.replaceAll("/", "");
-    if (url === "/") {
+    // alert(clsnm);
+    let myList = ['skills', 'studies', 'projects', 'blog', 'contact', ''];
+    if (myList.includes(clsnm)) {
+        if (url === "/") {
         pages[0].classList.add("active");
         navigationLinks[0].classList.add("active");
     } else {
         const button = document.getElementById("" + clsnm);
+        try {
         button.classList.add("active");
+        } catch (_) {
+            console.log(_);
+        }
         const elements = document.querySelectorAll("." + clsnm);
 
         if (elements.length > 0) {
@@ -152,6 +169,10 @@ const onPopState = function (event) {
 
             });
         }
+    }}
+    else {
+        document.querySelector('.notfndpage').classList.add("active");
+        // navigationLinks[0].classList.add("active");
     }
 
     console.log(url);
@@ -236,12 +257,15 @@ async function runAnimation() {
   }
 }
 
-setTimeout(() => {
+
+
+window.addEventListener('load', () => {
+  // Remove the active class to hide the preloader
+   setTimeout(() => {
   runAnimation();
 }, 20);
 
-
-
+});
 
 
 
