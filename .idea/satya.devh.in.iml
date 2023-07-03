@@ -12,8 +12,5 @@
     <orderEntry type="library" name="marked" level="application" />
     <orderEntry type="library" name="ritcuqlt" level="application" />
     <orderEntry type="library" name="ionicons" level="application" />
-    <orderEntry type="library" name="@lottiefiles/lottie-player" level="application" />
-    <orderEntry type="library" name="marked" level="application" />
-    <orderEntry type="library" name="ritcuqlt" level="application" />
   </component>
 </module>
