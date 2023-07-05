@@ -1267,7 +1267,6 @@ loadingText.textContent = getRandomString();
     const preloader = document.querySelector('.preloader');
     window.addEventListener('load', () => {
       // Remove the active class to hide the preloader
-        loadingText.textContent = "You’re about to witness something amazing.";
         setTimeout(() => {
             preloader.classList.remove('active');
         }, 1500);
