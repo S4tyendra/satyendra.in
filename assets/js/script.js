@@ -255,6 +255,20 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         runAnimation();
     }, 20);
+    if (window.location.href.includes('?showSocial=true')) {
+    showLoading();
+    setTimeout(() => {
+        hideMain();
+        setTimeout(() => {
+            showBtns();
+            showMain();
+            addLinks();
+        }, 200);
+    }, 2000);
+
+    const newUrl = window.location.href.replaceAll('?showSocial=true', '');
+    window.history.pushState(null, '', newUrl);
+}
 
 });
 
@@ -424,17 +438,3 @@ function showLoadingAndHideBtnWithLoading() {
 
 }
 
-if (window.location.href.includes('?showSocial=true')) {
-    showLoading();
-    setTimeout(() => {
-        hideMain();
-        setTimeout(() => {
-            showBtns();
-            showMain();
-            addLinks();
-        }, 200);
-    }, 2000);
-
-    const newUrl = window.location.href.replaceAll('?showSocial=true', '');
-    window.history.pushState(null, '', newUrl);
-}
