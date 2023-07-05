@@ -273,22 +273,24 @@ function showSnackbar(msg) {
     }, 6000);
 }
 
-let btn = document.querySelector('.form-btn');
-btn.addEventListener('click', sendmsg);
+function addLinks() {
+    let btn = document.querySelector('.form-btn');
+    btn.addEventListener('click', sendmsg);
 
 
-const cards = document.getElementsByClassName('card');
-const usernames = ['s4tyendra', 's4tyendra', 's4tyendra', 's4tyendra', 's4tyendra', '918790863694', 'satyendra_xd', 's4tyendra', 's4tyendra', 's4tyendra'];
-const platforms = ['facebook', 'instagram', 'twitter', 'linkedin', 'youtube', 'whatsapp', 'snapchat', 'github', 'reddit', 'telegram'];
+    const cards = document.getElementsByClassName('card');
+    const usernames = ['s4tyendra', 's4tyendra', 's4tyendra', 's4tyendra', 's4tyendra', '918790863694', 'satyendra_xd', 's4tyendra', 's4tyendra', 's4tyendra'];
+    const platforms = ['facebook', 'instagram', 'twitter', 'linkedin', 'youtube', 'whatsapp', 'snapchat', 'github', 'reddit', 'telegram'];
 
-for (let i = 0; i < cards.length; i++) {
-    const card = cards[i];
-    const username = usernames[i];
-    const platform = platforms[i];
+    for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        const username = usernames[i];
+        const platform = platforms[i];
 
-    card.addEventListener('click', function () {
-        openLink(platform, username);
-    });
+        card.addEventListener('click', function () {
+            openLink(platform, username);
+        });
+    }
 }
 
 function openLink(platform, username) {
@@ -401,35 +403,38 @@ function showLoading() {
 function showBtns() {
     main.innerHTML = btns;
 }
+
 function showLoadingAndHideBtnWithLoading() {
     const pth = localStorage.getItem('_id');
-if (pth === "contact") {
-    showLoading();
+    if (pth === "contact") {
+        showLoading();
         setTimeout(() => {
             hideMain();
             setTimeout(() => {
                 showBtns();
                 showMain();
+                addLinks();
             }, 200);
         }, 2000);
-} else {
-    const currentUrl = window.location.href;
-    window.location.href = currentUrl + '?showSocial=true';
-}
-
-
+    } else {
+        const currentUrl = window.location.href;
+        window.location.href = currentUrl + '?showSocial=true';
     }
 
-if (window.location.href.includes('?showSocial=true')) {
-   showLoading();
-        setTimeout(() => {
-            hideMain();
-            setTimeout(() => {
-                showBtns();
-                showMain();
-            }, 200);
-        }, 2000);
 
-    const newUrl = window.location.href.replaceAll('?showSocial=true', '') ;
-window.history.pushState(null, '', newUrl);
+}
+
+if (window.location.href.includes('?showSocial=true')) {
+    showLoading();
+    setTimeout(() => {
+        hideMain();
+        setTimeout(() => {
+            showBtns();
+            showMain();
+            addLinks();
+        }, 200);
+    }, 2000);
+
+    const newUrl = window.location.href.replaceAll('?showSocial=true', '');
+    window.history.pushState(null, '', newUrl);
 }
