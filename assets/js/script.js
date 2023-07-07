@@ -420,6 +420,7 @@ function showBtns() {
 
 function showLoadingAndHideBtnWithLoading() {
     const pth = localStorage.getItem('_id');
+    showLoading();
     if (pth === "contact") {
         showLoading();
         setTimeout(() => {
