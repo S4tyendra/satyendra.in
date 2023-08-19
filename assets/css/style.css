@@ -2365,43 +2365,43 @@ button:hover span {
 }
 
 .card:nth-child(1):hover {
-    background-color: rgba(59, 89, 152, 0.5);
+    background-color: #3b599880;
 }
 
 .card:nth-child(2):hover {
-    background-color: rgba(225, 48, 108, 0.5);
+    background-color: #e1306c80;
 }
 
 .card:nth-child(3):hover {
-    background-color: rgba(29, 161, 242, 0.5);
+    background-color: #1da1f280;
 }
 
 .card:nth-child(4):hover {
-    background-color: rgba(10, 102, 194, 0.5);
+    background-color: #0a66c280;
 }
 
 .card:nth-child(5):hover {
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: #ff000080;
 }
 
 .card:nth-child(6):hover {
-    background-color: rgba(74, 201, 89, 0.5);
+    background-color: #4ac95980;
 }
 
 .card:nth-child(7):hover {
-    background-color: rgba(255, 252, 0, 0.5);
+    background-color: #fffc0080;
 }
 
 .card:nth-child(8):hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #00000033;
 }
 
 .card:nth-child(9):hover {
-    background-color: rgba(255, 87, 0, 0.5);
+    background-color: #ff570080;
 }
 
 .card:nth-child(10):hover {
-    background-color: rgba(0, 136, 204, 0.5);
+    background-color: #0088cc80;
 }
 
 .card i {

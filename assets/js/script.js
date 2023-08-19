@@ -140,42 +140,48 @@ function change(data) {
 }
 
 const onPopState = function (event) {
-    try {
-        removeActive();
-    } catch (error) {
+    try{
+        try {
+            removeActive();
+        } catch (error) {
 
-    }
-
-    const url = document.location.pathname;
-    const clsnm = url.replaceAll("/", "");
-    // alert(clsnm);
-    let myList = ['skills', 'studies', 'projects', 'blog', 'contact', ''];
-    if (myList.includes(clsnm)) {
-        if (url === "/") {
-            pages[0].classList.add("active");
-            navigationLinks[0].classList.add("active");
-        } else {
-            const button = document.getElementById("" + clsnm);
-            try {
-                button.classList.add("active");
-            } catch (_) {
-                console.log(_);
-            }
-            const elements = document.querySelectorAll("." + clsnm);
-
-            if (elements.length > 0) {
-                elements.forEach(element => {
-                    element.classList.add("active");
-
-                });
-            }
         }
-    } else {
-        document.querySelector('.notfndpage').classList.add("active");
-        // navigationLinks[0].classList.add("active");
-    }
 
-    console.log(url);
+        const url = document.location.pathname;
+        const clsnm = url.replaceAll("/", "");
+        // alert(clsnm);
+        let myList = ['skills', 'studies', 'projects', 'blog', 'contact', ''];
+        if (myList.includes(clsnm)) {
+            if (url === "/") {
+                pages[0].classList.add("active");
+                navigationLinks[0].classList.add("active");
+            } else {
+                const button = document.getElementById("" + clsnm);
+                try {
+                    button.classList.add("active");
+                } catch (_) {
+                    console.log(_);
+                }
+                const elements = document.querySelectorAll("." + clsnm);
+
+                if (elements.length > 0) {
+                    elements.forEach(element => {
+                        element.classList.add("active");
+
+                    });
+                }
+            }
+        } else {
+            document.querySelector('.notfndpage').classList.add("active");
+            // navigationLinks[0].classList.add("active");
+        }
+
+        console.log(url);
+    } catch (error){
+        window.history.back();
+        alert("Something terrible happened.")
+
+    }
 
 };
 window.addEventListener("popstate", onPopState);
@@ -352,20 +358,22 @@ function openLink(platform, username) {
 
 localStorage.setItem('_id', window.location.pathname.replaceAll('/', ''));
 
-const btns = `<div class="card card-for-link">
-    <i class="fab fa-facebook"></i>
+const btns = `
+  <div class="card card-for-link">
+  <img id="twitr" src="../../assets/images/facebook.svg"/>
   </div>
   <div class="card card-for-link">
-    <i class="fab fa-instagram"></i>
+  <img id="twitr" src="../../assets/images/instagram.svg"/>
   </div>
   <div class="card card-for-link">
-    <i class="fab fa-twitter"></i>
+  <img id="twitr" src="../../assets/images/twitter.svg"/>
+    
   </div>
   <div class="card card-for-link">
-    <i class="fab fa-linkedin"></i>
+  <img id="twitr" src="../../assets/images/linkedin.svg"/>
   </div>
   <div class="card card-for-link">
-    <i class="fab fa-youtube"></i>
+  <img id="twitr" src="../../assets/images/youtube.svg"/>
   </div>
   <div class="card card-for-link">
     <i class="fab fa-whatsapp"></i>
@@ -374,13 +382,13 @@ const btns = `<div class="card card-for-link">
     <i class="fab fa-snapchat"></i>
   </div>
   <div class="card card-for-link">
-    <i class="fab fa-github"></i>
+  <img id="twitr" src="../../assets/images/github.svg"/>
   </div>
   <div class="card card-for-link">
     <i class="fab fa-reddit"></i>
   </div>
     <div class="card card-for-link">
-    <i class="fab fa-telegram"></i>
+    <img id="twitr" src="../../assets/images/telegram.svg"/>
   </div>`;
 
 const loader = `<div class="spinner2 center">

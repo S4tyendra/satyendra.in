@@ -1190,20 +1190,24 @@ loadingText.textContent = getRandomString();
 
         <section class="contact-form">
           <h3 class="h3 form-title">Message me</h3>
-<div class="main">
-  <button class="cssbuttons-io-button"> Social Links
-    <div class="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-        <path fill="none" d="M0 0h24v24H0z"></path>
-        <path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
-      </svg>
-    </div>
-  </button>
 
-</div>
+          <div class="main">
+            <button class="cssbuttons-io-button"> Social Links
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path fill="currentColor"
+                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
+                </svg>
+              </div>
+            </button>
 
-                    <div id="snackbar"></div>
-          <form class="form" data-form="">
+          </div>
+
+
+          <div id="snackbar"></div>
+
+          <form class="form" action="https://fabform.io/f/IPldpod" method="post" data-form="">
             <div class="input-wrapper">
 
 
@@ -1220,11 +1224,12 @@ loadingText.textContent = getRandomString();
 
             <textarea name="message" class="form-input" placeholder="Your Message" required="" id="message"
               data-form-input=""></textarea>
-
-            <button onclick="sendmsg();" class="form-btn" disabled="" data-form-btn="">
+            <button class="form-btn" disabled="" type="submit" data-form-btn="">
               <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
               <span>Send Message</span>
             </button>
+
+
 
           </form>
         </section>
