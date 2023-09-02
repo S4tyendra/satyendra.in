@@ -1,564 +1,629 @@
 <html lang="en" class="hydrated">
 
 <head>
-    <meta charset="UTF-8">
-      <style>
+  <meta charset="UTF-8">
+  <style>
     .wheel-and-hamster {
-  --dur: 1s;
-  position: relative;
-  width: 12em;
-  height: 12em;
-  font-size: 14px;
-}
+      --dur: 1s;
+      position: relative;
+      width: 12em;
+      height: 12em;
+      font-size: 14px;
+    }
 
-.wheel,
-.hamster,
-.hamster div,
-.spoke {
-  position: absolute;
-}
+    .wheel,
+    .hamster,
+    .hamster div,
+    .spoke {
+      position: absolute;
+    }
 
-.wheel,
-.spoke {
-  border-radius: 50%;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+    .wheel,
+    .spoke {
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-.wheel {
-  background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
-  z-index: 2;
-}
+    .wheel {
+      background: radial-gradient(100% 100% at center, hsla(0, 0%, 60%, 0) 47.8%, hsl(0, 0%, 60%) 48%);
+      z-index: 2;
+    }
 
-.hamster {
-  animation: hamster var(--dur) ease-in-out infinite;
-  top: 50%;
-  left: calc(50% - 3.5em);
-  width: 7em;
-  height: 3.75em;
-  transform: rotate(4deg) translate(-0.8em,1.85em);
-  transform-origin: 50% 0;
-  z-index: 1;
-}
+    .hamster {
+      animation: hamster var(--dur) ease-in-out infinite;
+      top: 50%;
+      left: calc(50% - 3.5em);
+      width: 7em;
+      height: 3.75em;
+      transform: rotate(4deg) translate(-0.8em, 1.85em);
+      transform-origin: 50% 0;
+      z-index: 1;
+    }
 
-.hamster__head {
-  animation: hamsterHead var(--dur) ease-in-out infinite;
-  background: hsl(30,90%,55%);
-  border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
-  box-shadow: 0 -0.25em 0 hsl(30,90%,80%) inset,
-		0.75em -1.55em 0 hsl(30,90%,90%) inset;
-  top: 0;
-  left: -2em;
-  width: 2.75em;
-  height: 2.5em;
-  transform-origin: 100% 50%;
-}
+    .hamster__head {
+      animation: hamsterHead var(--dur) ease-in-out infinite;
+      background: hsl(30, 90%, 55%);
+      border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
+      box-shadow: 0 -0.25em 0 hsl(30, 90%, 80%) inset,
+        0.75em -1.55em 0 hsl(30, 90%, 90%) inset;
+      top: 0;
+      left: -2em;
+      width: 2.75em;
+      height: 2.5em;
+      transform-origin: 100% 50%;
+    }
 
-.hamster__ear {
-  animation: hamsterEar var(--dur) ease-in-out infinite;
-  background: hsl(0,90%,85%);
-  border-radius: 50%;
-  box-shadow: -0.25em 0 hsl(30,90%,55%) inset;
-  top: -0.25em;
-  right: -0.25em;
-  width: 0.75em;
-  height: 0.75em;
-  transform-origin: 50% 75%;
-}
+    .hamster__ear {
+      animation: hamsterEar var(--dur) ease-in-out infinite;
+      background: hsl(0, 90%, 85%);
+      border-radius: 50%;
+      box-shadow: -0.25em 0 hsl(30, 90%, 55%) inset;
+      top: -0.25em;
+      right: -0.25em;
+      width: 0.75em;
+      height: 0.75em;
+      transform-origin: 50% 75%;
+    }
 
-.hamster__eye {
-  animation: hamsterEye var(--dur) linear infinite;
-  background-color: hsl(0,0%,0%);
-  border-radius: 50%;
-  top: 0.375em;
-  left: 1.25em;
-  width: 0.5em;
-  height: 0.5em;
-}
+    .hamster__eye {
+      animation: hamsterEye var(--dur) linear infinite;
+      background-color: hsl(0, 0%, 0%);
+      border-radius: 50%;
+      top: 0.375em;
+      left: 1.25em;
+      width: 0.5em;
+      height: 0.5em;
+    }
 
-.hamster__nose {
-  background: hsl(0,90%,75%);
-  border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
-  top: 0.75em;
-  left: 0;
-  width: 0.2em;
-  height: 0.25em;
-}
+    .hamster__nose {
+      background: hsl(0, 90%, 75%);
+      border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
+      top: 0.75em;
+      left: 0;
+      width: 0.2em;
+      height: 0.25em;
+    }
 
-.hamster__body {
-  animation: hamsterBody var(--dur) ease-in-out infinite;
-  background: hsl(30,90%,90%);
-  border-radius: 50% 30% 50% 30% / 15% 60% 40% 40%;
-  box-shadow: 0.1em 0.75em 0 hsl(30,90%,55%) inset,
-		0.15em -0.5em 0 hsl(30,90%,80%) inset;
-  top: 0.25em;
-  left: 2em;
-  width: 4.5em;
-  height: 3em;
-  transform-origin: 17% 50%;
-  transform-style: preserve-3d;
-}
+    .hamster__body {
+      animation: hamsterBody var(--dur) ease-in-out infinite;
+      background: hsl(30, 90%, 90%);
+      border-radius: 50% 30% 50% 30% / 15% 60% 40% 40%;
+      box-shadow: 0.1em 0.75em 0 hsl(30, 90%, 55%) inset,
+        0.15em -0.5em 0 hsl(30, 90%, 80%) inset;
+      top: 0.25em;
+      left: 2em;
+      width: 4.5em;
+      height: 3em;
+      transform-origin: 17% 50%;
+      transform-style: preserve-3d;
+    }
 
-.hamster__limb--fr,
-.hamster__limb--fl {
-  clip-path: polygon(0 0,100% 0,70% 80%,60% 100%,0% 100%,40% 80%);
-  top: 2em;
-  left: 0.5em;
-  width: 1em;
-  height: 1.5em;
-  transform-origin: 50% 0;
-}
+    .hamster__limb--fr,
+    .hamster__limb--fl {
+      clip-path: polygon(0 0, 100% 0, 70% 80%, 60% 100%, 0% 100%, 40% 80%);
+      top: 2em;
+      left: 0.5em;
+      width: 1em;
+      height: 1.5em;
+      transform-origin: 50% 0;
+    }
 
-.hamster__limb--fr {
-  animation: hamsterFRLimb var(--dur) linear infinite;
-  background: linear-gradient(hsl(30,90%,80%) 80%,hsl(0,90%,75%) 80%);
-  transform: rotate(15deg) translateZ(-1px);
-}
+    .hamster__limb--fr {
+      animation: hamsterFRLimb var(--dur) linear infinite;
+      background: linear-gradient(hsl(30, 90%, 80%) 80%, hsl(0, 90%, 75%) 80%);
+      transform: rotate(15deg) translateZ(-1px);
+    }
 
-.hamster__limb--fl {
-  animation: hamsterFLLimb var(--dur) linear infinite;
-  background: linear-gradient(hsl(30,90%,90%) 80%,hsl(0,90%,85%) 80%);
-  transform: rotate(15deg);
-}
+    .hamster__limb--fl {
+      animation: hamsterFLLimb var(--dur) linear infinite;
+      background: linear-gradient(hsl(30, 90%, 90%) 80%, hsl(0, 90%, 85%) 80%);
+      transform: rotate(15deg);
+    }
 
-.hamster__limb--br,
-.hamster__limb--bl {
-  border-radius: 0.75em 0.75em 0 0;
-  clip-path: polygon(0 0,100% 0,100% 30%,70% 90%,70% 100%,30% 100%,40% 90%,0% 30%);
-  top: 1em;
-  left: 2.8em;
-  width: 1.5em;
-  height: 2.5em;
-  transform-origin: 50% 30%;
-}
+    .hamster__limb--br,
+    .hamster__limb--bl {
+      border-radius: 0.75em 0.75em 0 0;
+      clip-path: polygon(0 0, 100% 0, 100% 30%, 70% 90%, 70% 100%, 30% 100%, 40% 90%, 0% 30%);
+      top: 1em;
+      left: 2.8em;
+      width: 1.5em;
+      height: 2.5em;
+      transform-origin: 50% 30%;
+    }
 
-.hamster__limb--br {
-  animation: hamsterBRLimb var(--dur) linear infinite;
-  background: linear-gradient(hsl(30,90%,80%) 90%,hsl(0,90%,75%) 90%);
-  transform: rotate(-25deg) translateZ(-1px);
-}
+    .hamster__limb--br {
+      animation: hamsterBRLimb var(--dur) linear infinite;
+      background: linear-gradient(hsl(30, 90%, 80%) 90%, hsl(0, 90%, 75%) 90%);
+      transform: rotate(-25deg) translateZ(-1px);
+    }
 
-.hamster__limb--bl {
-  animation: hamsterBLLimb var(--dur) linear infinite;
-  background: linear-gradient(hsl(30,90%,90%) 90%,hsl(0,90%,85%) 90%);
-  transform: rotate(-25deg);
-}
+    .hamster__limb--bl {
+      animation: hamsterBLLimb var(--dur) linear infinite;
+      background: linear-gradient(hsl(30, 90%, 90%) 90%, hsl(0, 90%, 85%) 90%);
+      transform: rotate(-25deg);
+    }
 
-.hamster__tail {
-  animation: hamsterTail var(--dur) linear infinite;
-  background: hsl(0,90%,85%);
-  border-radius: 0.25em 50% 50% 0.25em;
-  box-shadow: 0 -0.2em 0 hsl(0,90%,75%) inset;
-  top: 1.5em;
-  right: -0.5em;
-  width: 1em;
-  height: 0.5em;
-  transform: rotate(30deg) translateZ(-1px);
-  transform-origin: 0.25em 0.25em;
-}
+    .hamster__tail {
+      animation: hamsterTail var(--dur) linear infinite;
+      background: hsl(0, 90%, 85%);
+      border-radius: 0.25em 50% 50% 0.25em;
+      box-shadow: 0 -0.2em 0 hsl(0, 90%, 75%) inset;
+      top: 1.5em;
+      right: -0.5em;
+      width: 1em;
+      height: 0.5em;
+      transform: rotate(30deg) translateZ(-1px);
+      transform-origin: 0.25em 0.25em;
+    }
 
-.spoke {
-  animation: spoke var(--dur) linear infinite;
-  background: radial-gradient(100% 100% at center,hsl(0,0%,60%) 4.8%,hsla(0,0%,60%,0) 5%),
-		linear-gradient(hsla(0,0%,55%,0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
-}
+    .spoke {
+      animation: spoke var(--dur) linear infinite;
+      background: radial-gradient(100% 100% at center, hsl(0, 0%, 60%) 4.8%, hsla(0, 0%, 60%, 0) 5%),
+        linear-gradient(hsla(0, 0%, 55%, 0) 46.9%, hsl(0, 0%, 65%) 47% 52.9%, hsla(0, 0%, 65%, 0) 53%) 50% 50% / 99% 99% no-repeat;
+    }
 
-/* Animations */
-@keyframes hamster {
-  from, to {
-    transform: rotate(4deg) translate(-0.8em,1.85em);
-  }
+    /* Animations */
+    @keyframes hamster {
 
-  50% {
-    transform: rotate(0) translate(-0.8em,1.85em);
-  }
-}
+      from,
+      to {
+        transform: rotate(4deg) translate(-0.8em, 1.85em);
+      }
 
-@keyframes hamsterHead {
-  from, 25%, 50%, 75%, to {
-    transform: rotate(0);
-  }
+      50% {
+        transform: rotate(0) translate(-0.8em, 1.85em);
+      }
+    }
 
-  12.5%, 37.5%, 62.5%, 87.5% {
-    transform: rotate(8deg);
-  }
-}
+    @keyframes hamsterHead {
 
-@keyframes hamsterEye {
-  from, 90%, to {
-    transform: scaleY(1);
-  }
+      from,
+      25%,
+      50%,
+      75%,
+      to {
+        transform: rotate(0);
+      }
 
-  95% {
-    transform: scaleY(0);
-  }
-}
+      12.5%,
+      37.5%,
+      62.5%,
+      87.5% {
+        transform: rotate(8deg);
+      }
+    }
 
-@keyframes hamsterEar {
-  from, 25%, 50%, 75%, to {
-    transform: rotate(0);
-  }
+    @keyframes hamsterEye {
 
-  12.5%, 37.5%, 62.5%, 87.5% {
-    transform: rotate(12deg);
-  }
-}
+      from,
+      90%,
+      to {
+        transform: scaleY(1);
+      }
 
-@keyframes hamsterBody {
-  from, 25%, 50%, 75%, to {
-    transform: rotate(0);
-  }
+      95% {
+        transform: scaleY(0);
+      }
+    }
 
-  12.5%, 37.5%, 62.5%, 87.5% {
-    transform: rotate(-2deg);
-  }
-}
+    @keyframes hamsterEar {
 
-@keyframes hamsterFRLimb {
-  from, 25%, 50%, 75%, to {
-    transform: rotate(50deg) translateZ(-1px);
-  }
+      from,
+      25%,
+      50%,
+      75%,
+      to {
+        transform: rotate(0);
+      }
 
-  12.5%, 37.5%, 62.5%, 87.5% {
-    transform: rotate(-30deg) translateZ(-1px);
-  }
-}
+      12.5%,
+      37.5%,
+      62.5%,
+      87.5% {
+        transform: rotate(12deg);
+      }
+    }
 
-@keyframes hamsterFLLimb {
-  from, 25%, 50%, 75%, to {
-    transform: rotate(-30deg);
-  }
+    @keyframes hamsterBody {
 
-  12.5%, 37.5%, 62.5%, 87.5% {
-    transform: rotate(50deg);
-  }
-}
+      from,
+      25%,
+      50%,
+      75%,
+      to {
+        transform: rotate(0);
+      }
 
-@keyframes hamsterBRLimb {
-  from, 25%, 50%, 75%, to {
-    transform: rotate(-60deg) translateZ(-1px);
-  }
+      12.5%,
+      37.5%,
+      62.5%,
+      87.5% {
+        transform: rotate(-2deg);
+      }
+    }
 
-  12.5%, 37.5%, 62.5%, 87.5% {
-    transform: rotate(20deg) translateZ(-1px);
-  }
-}
+    @keyframes hamsterFRLimb {
 
-@keyframes hamsterBLLimb {
-  from, 25%, 50%, 75%, to {
-    transform: rotate(20deg);
-  }
+      from,
+      25%,
+      50%,
+      75%,
+      to {
+        transform: rotate(50deg) translateZ(-1px);
+      }
 
-  12.5%, 37.5%, 62.5%, 87.5% {
-    transform: rotate(-60deg);
-  }
-}
+      12.5%,
+      37.5%,
+      62.5%,
+      87.5% {
+        transform: rotate(-30deg) translateZ(-1px);
+      }
+    }
 
-@keyframes hamsterTail {
-  from, 25%, 50%, 75%, to {
-    transform: rotate(30deg) translateZ(-1px);
-  }
+    @keyframes hamsterFLLimb {
 
-  12.5%, 37.5%, 62.5%, 87.5% {
-    transform: rotate(10deg) translateZ(-1px);
-  }
-}
+      from,
+      25%,
+      50%,
+      75%,
+      to {
+        transform: rotate(-30deg);
+      }
 
-@keyframes spoke {
-  from {
-    transform: rotate(0);
-  }
+      12.5%,
+      37.5%,
+      62.5%,
+      87.5% {
+        transform: rotate(50deg);
+      }
+    }
 
-  to {
-    transform: rotate(-1turn);
-  }
-}
+    @keyframes hamsterBRLimb {
+
+      from,
+      25%,
+      50%,
+      75%,
+      to {
+        transform: rotate(-60deg) translateZ(-1px);
+      }
+
+      12.5%,
+      37.5%,
+      62.5%,
+      87.5% {
+        transform: rotate(20deg) translateZ(-1px);
+      }
+    }
+
+    @keyframes hamsterBLLimb {
+
+      from,
+      25%,
+      50%,
+      75%,
+      to {
+        transform: rotate(20deg);
+      }
+
+      12.5%,
+      37.5%,
+      62.5%,
+      87.5% {
+        transform: rotate(-60deg);
+      }
+    }
+
+    @keyframes hamsterTail {
+
+      from,
+      25%,
+      50%,
+      75%,
+      to {
+        transform: rotate(30deg) translateZ(-1px);
+      }
+
+      12.5%,
+      37.5%,
+      62.5%,
+      87.5% {
+        transform: rotate(10deg) translateZ(-1px);
+      }
+    }
+
+    @keyframes spoke {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        transform: rotate(-1turn);
+      }
+    }
   </style>
-<!--  -->
-<!--  -->
-    <style data-styles="">
-        ion-icon {
-            visibility: hidden
-        }
+  <!--  -->
+  <!--  -->
+  <style data-styles="">
+    ion-icon {
+      visibility: hidden
+    }
 
-        .hydrated {
-            visibility: inherit
-        }
-    </style>
-    <style>
+    .hydrated {
+      visibility: inherit
+    }
+  </style>
+  <style>
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: hsl(240deg 1.64% 11.96%);
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 1.5s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: hsl(240deg 1.64% 11.96%);
-            z-index: 9999;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.5s ease, visibility 1.5s ease;
-          display: flex;
-            justify-content: center;
-            align-items: center;
-           flex-direction: column;
-        }
+    .preloader.active {
+      opacity: 1;
+      visibility: visible;
+    }
 
-        .preloader.active {
-            opacity: 1;
-            visibility: visible;
-        }
+    .spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      margin-top: -30px;
+      margin-left: -30px;
+      border-radius: 50%;
+      border: 5px solid #1a15155b;
+      border-top-color: #00ffd0;
+      animation: spin 1s ease-in-out infinite;
+    }
 
-        .spinner {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 60px;
-            height: 60px;
-            margin-top: -30px;
-            margin-left: -30px;
-            border-radius: 50%;
-            border: 5px solid #1a15155b;
-            border-top-color: #00ffd0;
-            animation: spin 1s ease-in-out infinite;
-        }
+    /* Define the keyframes for the spinner animation */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
 
-        /* Define the keyframes for the spinner animation */
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
+      60% {
+        transform: rotate(300deg);
+      }
 
-            60% {
-                transform: rotate(300deg);
-            }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
 
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        .loading-text {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-top: 1rem;
-           display: block;
-        }
+    .loading-text {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-top: 1rem;
+      display: block;
+    }
+  </style>
+  <style data-styles="">
+    ion-icon {
+      visibility: hidden
+    }
 
-    </style>
-    <style data-styles="">
-        ion-icon {
-            visibility: hidden
-        }
+    .hydrated {
+      visibility: inherit
+    }
+  </style>
+  <style>
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: hsl(240deg 1.64% 11.96%);
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 1.5s ease;
+    }
 
-        .hydrated {
-            visibility: inherit
-        }
-    </style>
-    <style>
+    .preloader.active {
+      opacity: 1;
+      visibility: visible;
+    }
 
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: hsl(240deg 1.64% 11.96%);
-            z-index: 9999;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.5s ease, visibility 1.5s ease;
-        }
+    .spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      margin-top: -30px;
+      margin-left: -30px;
+      border-radius: 50%;
+      border: 5px solid #1a15155b;
+      border-top-color: #00ffd0;
+      animation: spin 1s ease-in-out infinite;
+    }
 
-        .preloader.active {
-            opacity: 1;
-            visibility: visible;
-        }
+    /* Define the keyframes for the spinner animation */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
 
-        .spinner {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 60px;
-            height: 60px;
-            margin-top: -30px;
-            margin-left: -30px;
-            border-radius: 50%;
-            border: 5px solid #1a15155b;
-            border-top-color: #00ffd0;
-            animation: spin 1s ease-in-out infinite;
-        }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 
-        /* Define the keyframes for the spinner animation */
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
+  <!-- Primary Meta Tags -->
+  <title>Studies - Satyendra Bongi - Full Stack Developer &amp; IIIT Kota Student</title>
+  <meta name="author" content="Satyendra">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Satyendra, Bongi, IIIT, KOTA">
+  <meta charset="UTF-8">
+  <!-- Primary Meta Tags -->
+  <meta name="description"
+    content="Studies - Satyendra Bongi, a passionate Full Stack Developer currently studying at Indian Institute of Information Technology Kota (IIIT Kota). I create scalable and responsive web applications using modern web technologies like React, Node.js, and MongoDB. Check out my projects and projects on GitHub.">
 
-            100% {
-                transform: rotate(360deg);
-            }
-        }
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://satya.devh.in/">
+  <meta property="og:title" content="Studies - Satyendra Bongi - Full Stack Developer &amp; IIIT Kota Student">
+  <meta property="og:description"
+    content="Studies - Satyendra Bongi, a passionate Full Stack Developer currently studying at Indian Institute of Information Technology Kota (IIIT Kota). I create scalable and responsive web applications using modern web technologies like React, Node.js, and MongoDB. Check out my projects and projects on GitHub.">
+  <meta property="og:image"
+    content="https://res.cloudinary.com/dpu5ywrox/image/upload/v1684487885/lom6ztmrv2cnaz09l6ab.png">
 
-    </style>
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://satya.devh.in/">
+  <meta property="twitter:title" content="Studies - Satyendra Bongi - Full Stack Developer &amp; IIIT Kota Student">
+  <meta property="twitter:description"
+    content="Studies - Satyendra Bongi, a passionate Full Stack Developer currently studying at Indian Institute of Information Technology Kota (IIIT Kota). I create scalable and responsive web applications using modern web technologies like React, Node.js, and MongoDB. Check out my projects and projects on GitHub.">
+  <meta property="twitter:image"
+    content="http://res.cloudinary.com/dpu5ywrox/image/upload/v1684487885/lom6ztmrv2cnaz09l6ab.png">
 
-    <!-- Primary Meta Tags -->
-    <title>Studies - Satyendra Bongi - Full Stack Developer &amp; IIIT Kota Student</title>
-    <meta name="author" content="Satyendra">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Satyendra, Bongi, IIIT, KOTA">
-    <meta charset="UTF-8">
-    <!-- Primary Meta Tags -->
-    <meta name="description"
-          content="Studies - Satyendra Bongi, a passionate Full Stack Developer currently studying at Indian Institute of Information Technology Kota (IIIT Kota). I create scalable and responsive web applications using modern web technologies like React, Node.js, and MongoDB. Check out my projects and projects on GitHub.">
+  <!-- Mobile App Support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://satya.devh.in/">
-    <meta property="og:title" content="Studies - Satyendra Bongi - Full Stack Developer &amp; IIIT Kota Student">
-    <meta property="og:description"
-          content="Studies - Satyendra Bongi, a passionate Full Stack Developer currently studying at Indian Institute of Information Technology Kota (IIIT Kota). I create scalable and responsive web applications using modern web technologies like React, Node.js, and MongoDB. Check out my projects and projects on GitHub.">
-    <meta property="og:image"
-          content="https://res.cloudinary.com/dpu5ywrox/image/upload/v1684487885/lom6ztmrv2cnaz09l6ab.png">
+  <!-- SEO Meta Tags -->
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://satya.devh.in/">
-    <meta property="twitter:title" content="Studies - Satyendra Bongi - Full Stack Developer &amp; IIIT Kota Student">
-    <meta property="twitter:description"
-          content="Studies - Satyendra Bongi, a passionate Full Stack Developer currently studying at Indian Institute of Information Technology Kota (IIIT Kota). I create scalable and responsive web applications using modern web technologies like React, Node.js, and MongoDB. Check out my projects and projects on GitHub.">
-    <meta property="twitter:image"
-          content="http://res.cloudinary.com/dpu5ywrox/image/upload/v1684487885/lom6ztmrv2cnaz09l6ab.png">
+  <meta name="copyright" content="Satyendra">
 
-    <!-- Mobile App Support -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <!-- SEO Meta Tags -->
-
-    <meta name="copyright" content="Satyendra">
-
-    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 
-    <!--
+  <!--
       - favicon
     -->
-    <link rel="icon" href="/assets/images/logo-icon.png" type="image/png">
+  <link rel="icon" href="/assets/images/logo-icon.png" type="image/png">
 
-    <!--
+  <!--
       - custom css link
     -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 
-    <!--
+  <!--
       - google font link
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap"
-          rel="stylesheet">
-    <link rel="shortcut icon" href="/assets/images/logo-icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/assets/images/logo-icon.png" type="image/png">
 
-    <style id="aby-style"></style>
+  <style id="aby-style"></style>
 </head>
 
 <body>
-<div class="background-image"></div>
+  <div class="background-image"></div>
   <div class="preloader active">
-<!--    <div class="spinner"></div>-->
-     <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
-	<div class="wheel"></div>
-	<div class="hamster">
-		<div class="hamster__body">
-			<div class="hamster__head">
-				<div class="hamster__ear"></div>
-				<div class="hamster__eye"></div>
-				<div class="hamster__nose"></div>
-			</div>
-			<div class="hamster__limb hamster__limb--fr"></div>
-			<div class="hamster__limb hamster__limb--fl"></div>
-			<div class="hamster__limb hamster__limb--br"></div>
-			<div class="hamster__limb hamster__limb--bl"></div>
-			<div class="hamster__tail"></div>
-		</div>
-	</div>
-	<div class="spoke"></div>
-</div>
-  <div class="loading-text">Loading...</div>
-<script>
-  const loadingText = document.querySelector('.loading-text');
+    <!--    <div class="spinner"></div>-->
+    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+      <div class="wheel"></div>
+      <div class="hamster">
+        <div class="hamster__body">
+          <div class="hamster__head">
+            <div class="hamster__ear"></div>
+            <div class="hamster__eye"></div>
+            <div class="hamster__nose"></div>
+          </div>
+          <div class="hamster__limb hamster__limb--fr"></div>
+          <div class="hamster__limb hamster__limb--fl"></div>
+          <div class="hamster__limb hamster__limb--br"></div>
+          <div class="hamster__limb hamster__limb--bl"></div>
+          <div class="hamster__tail"></div>
+        </div>
+      </div>
+      <div class="spoke"></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+    <script>
+      const loadingText = document.querySelector('.loading-text');
 
-function getRandomString() {
-  const taglines = [
-    // Funny
-    "I'm running faster than your internet.",
-    "I'm not ratty, I'm just loading.",
-    "Don't rat me out, I'm almost done.",
-    "I'm not a snitch, I'm just fetching your data.",
-    "I'm not playing cat and mouse, I'm just loading.",
-    "I'm not a pest, I'm a helper.",
-    "Don't worry, I'm not contagious.",
-    "I'm not running away, I'm running towards your content.",
-    "I'm not a lab rat, I'm a web rat.",
-    "I'm not lazy, I'm just taking a break.",
-    "Hang in there, the rat race is almost over.",
-    "Don't be cheesy, I'm loading as fast as I can.",
-    "This rat is on a mission, please wait a bit.",
+      function getRandomString() {
+        const taglines = [
+          // Funny
+          "I'm running faster than your internet.",
+          "I'm not ratty, I'm just loading.",
+          "Don't rat me out, I'm almost done.",
+          "I'm not a snitch, I'm just fetching your data.",
+          "I'm not playing cat and mouse, I'm just loading.",
+          "I'm not a pest, I'm a helper.",
+          "Don't worry, I'm not contagious.",
+          "I'm not running away, I'm running towards your content.",
+          "I'm not a lab rat, I'm a web rat.",
+          "I'm not lazy, I'm just taking a break.",
+          "Hang in there, the rat race is almost over.",
+          "Don't be cheesy, I'm loading as fast as I can.",
+          "This rat is on a mission, please wait a bit.",
 
-    // Official
-    "Please wait while I prepare your content.",
-    "Loading... Thank you for your patience.",
-    "Your request is being processed, please stand by.",
-    "Please wait while I fetch your data.",
-    "Loading... Your satisfaction is our priority.",
-    "Please wait while I optimize your experience.",
-    "Loading... We value your time and feedback.",
-    "Please wait while I connect you to our server.",
-    "Loading... We are working hard to deliver your content.",
-    "Please wait while I verify your request.",
-    "Loading... We are committed to quality and service.",
-    "Please wait while I update our system.",
+          // Official
+          "Please wait while I prepare your content.",
+          "Loading... Thank you for your patience.",
+          "Your request is being processed, please stand by.",
+          "Please wait while I fetch your data.",
+          "Loading... Your satisfaction is our priority.",
+          "Please wait while I optimize your experience.",
+          "Loading... We value your time and feedback.",
+          "Please wait while I connect you to our server.",
+          "Loading... We are working hard to deliver your content.",
+          "Please wait while I verify your request.",
+          "Loading... We are committed to quality and service.",
+          "Please wait while I update our system.",
 
-    // Gen Z
-    "Loading... I'm fire, no lie.",
-    "I'm highkey grinding, just vibe for a bit.",
-    "Loading... I'm savage, not basic.",
-    "I'm flexing, just hang on for a hot sec.",
-    "Loading... I'm goals, trust.",
-    "I'm slaying, just chillax for a moment.",
-    "Loading... I'm dope, facts.",
-    "I'm woke, just sit tight for a while.",
-    "Loading... I'm sick, in a good way.",
-    "I'm legit, just hold up for a minute.",
-    "BRB, I'm zooming.",
-    "Loading... no cap, I'm lit.",
-    "I'm lowkey hustling, just chill for a sec.",
-            "Loading... Ganpati bappa morya!",
-  "I'm not a rat, I'm a devotee of Ganesha.",
-  "Please wait while I remove your obstacles.",
-  "Loading... May Ganesha bless you with wisdom and success.",
-  "I'm not running away, I'm running towards Ganesha.",
-  "Please wait while I bring you good luck and prosperity.",
-  "Loading... Jai Ganesh, Jai Ganesh, Jai Ganesh Deva.",
-  ];
+          // Gen Z
+          "Loading... I'm fire, no lie.",
+          "I'm highkey grinding, just vibe for a bit.",
+          "Loading... I'm savage, not basic.",
+          "I'm flexing, just hang on for a hot sec.",
+          "Loading... I'm goals, trust.",
+          "I'm slaying, just chillax for a moment.",
+          "Loading... I'm dope, facts.",
+          "I'm woke, just sit tight for a while.",
+          "Loading... I'm sick, in a good way.",
+          "I'm legit, just hold up for a minute.",
+          "BRB, I'm zooming.",
+          "Loading... no cap, I'm lit.",
+          "I'm lowkey hustling, just chill for a sec.",
+          "Loading... Ganpati bappa morya!",
+          "I'm not a rat, I'm a devotee of Ganesha.",
+          "Please wait while I remove your obstacles.",
+          "Loading... May Ganesha bless you with wisdom and success.",
+          "I'm not running away, I'm running towards Ganesha.",
+          "Please wait while I bring you good luck and prosperity.",
+          "Loading... Jai Ganesh, Jai Ganesh, Jai Ganesh Deva.",
+        ];
 
-  // Generate a random index
-  const randomIndex = Math.floor(Math.random() * taglines.length);
+        // Generate a random index
+        const randomIndex = Math.floor(Math.random() * taglines.length);
 
-  // Return the random tagline at the generated index
-  return taglines[randomIndex];
-}
+        // Return the random tagline at the generated index
+        return taglines[randomIndex];
+      }
 
-// Update the content of the loading-text div with a random tagline
-loadingText.textContent = getRandomString();
+      // Update the content of the loading-text div with a random tagline
+      loadingText.textContent = getRandomString();
 
-</script>
+    </script>
   </div>
   <!--
     - #MAIN
@@ -575,7 +640,7 @@ loadingText.textContent = getRandomString();
           <!--          <lord-icon src="https://cdn.lordicon.com/kxrhwtdg.json" trigger="loop"-->
           <!--            colors="primary:#3be6fc,secondary:#28ff14" style="width:110px;height:110px">-->
           <!--          </lord-icon>-->
-          <img src="/assets/images/logo.png" alt="Satyendra Bongi" width="120" />
+          <img loading="lazy" src="/assets/images/logo.png" alt="Satyendra Bongi" width="120" />
         </figure>
 
         <div class="info-content">
@@ -821,8 +886,8 @@ loadingText.textContent = getRandomString();
           <ul class="study-list">
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="/assets/images/iiitkota.png" alt="iiitkota" srcset="/assets/images/iiitkota.png" height="150"
-                  width="150">
+                <img loading="lazy" src="/assets/images/iiitkota.png" alt="iiitkota"
+                  srcset="/assets/images/iiitkota.png" height="150" width="150">
               </div>
 
               <div class="service-content-box">
@@ -927,6 +992,90 @@ loadingText.textContent = getRandomString();
 
 
           </ul>
+          <br>
+          <header>
+            <h2 class="h2 article-title">Tech Stack</h2>
+          </header>
+          <section class="skill stack-tech skills-list content-card">
+            <ul>
+              <li><img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+              </li>
+              <li><img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi"> </li>
+              <li><img
+                  src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white">
+              </li>
+              <li><img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/android-%2320232a.svg?style=for-the-badge&logo=android&logoColor=%a4c639">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white">
+              </li>
+              <li><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139">
+              </li>
+              <li><img
+                  src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
+              </li>
+            </ul>
+          </section>
         </section>
       </article>
 
@@ -989,179 +1138,474 @@ loadingText.textContent = getRandomString();
             </ul>
           </div>
 
-          <!-- <ul class="project-list">
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="mobile development"
-              >
-                <a href="https://erfanrht.github.io/MovieLab-Intro/">
-                  <ul class="content-card">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <h3 class="project-title">MovieLab</h3>
-                    <p class="project-description">
-                      A cross-platform mobile app for browsing movies and TV shows, including cast, production crew and personal biographies and plot summaries. It is written in Dart using Flutter.
-                    </p>
-                    <p class="project-category">Mobile App</p>
-                  </ul>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="mobile development"
-              >
-                <a href="https://github.com/ErfanRht/Tasker">
-                  <ul class="content-card">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="logo-github"></ion-icon>
-                    </div>
-
-                    <h3 class="project-title">Tasker</h3>
-                    <p class="project-description">
-                      An open source mobile app that helps you to organize your
-                      tasks.
-                    </p>
-                    <p class="project-category">Mobile App</p>
-                  </ul>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="mobile development"
-              >
-                <a href="https://github.com/ErfanRht/Anti-Corona">
-                  <ul class="content-card">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="logo-github"></ion-icon>
-                    </div>
-
-                    <h3 class="project-title">Anti-Corona</h3>
-                    <p class="project-description">
-                      An open source mobile app that helps you to protect your
-                      health against the Corona virus.
-                    </p>
-                    <p class="project-category">Mobile App</p>
-                  </ul>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="https://github.com/ErfanRht/Ghods-highschool">
-                  <ul class="content-card">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="logo-github"></ion-icon>
-                    </div>
-
-                    <h3 class="project-title">Ghods-highschool</h3>
-                    <p class="project-description">
-                      An open source web application which has developed for a
-                      highschool to give their students their passcodes to enter
-                      the school.
-                    </p>
-                    <p class="project-category">Web App</p>
-                  </ul>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="others"
-              >
-                <a href="https://github.com/ErfanRht/FAD-Spammer">
-                  <ul class="content-card">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="logo-github"></ion-icon>
-                    </div>
-                    <h3 class="project-title">FAD-Spammer</h3>
-                    <p class="project-description">
-                      An open source python program that helps you to send a huge number of fake SMS from unknown numbers to people you want.
-                    </p>
-                    <p class="project-category">Python Program</p>
-                  </ul>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="https://github.com/ErfanRht/Flutter-Personal-Website">
-                  <ul class="content-card">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="logo-github"></ion-icon>
-                    </div>
-                    <h3 class="project-title">Flutter Personal Website</h3>
-                    <p class="project-description">
-                      An open source flutter web app that helps you to create a personal website for yourself.
-                    </p>
-                    <p class="project-category">Website</p>
-                  </ul>
-                </a>
-              </li>
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="mobile development"
-              >
-                <a href="https://github.com/ErfanRht/Tic-Tac-Toe">
-                  <ul class="content-card">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="logo-github"></ion-icon>
-                    </div>
-                    <h3 class="project-title">Tic-Tac-Toe</h3>
-                    <p class="project-description">
-                      An open source mobile tic-tac-toe game, developed using Flutter!
-                    </p>
-                    <p class="project-category">Mobile App</p>
-                  </ul>
-                </a>
-              </li>
-              <li
-              class="project-item active"
-              data-filter-item
-              data-category="mobile development"
-            >
-              <a href="https://github.com/ErfanRht/Sudo-Wallpapers">
+          <ul class="project-list data-project-ul">
+            <li class="project-item active" data-filter-item="" data-category="others"><a
+                href="https://github.com/s4tyendra/Python-Scripts">
                 <ul class="content-card">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
-                  </div>
-                  <h3 class="project-title">Sudo-Wallpapers </h3>
-                  <p class="project-description">
-                    An open source mobile app that has a collection of various wallpapers for you to choose from.
-                  </p>
-                  <p class="project-category">Mobile App</p>
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">Python-Scripts</h3>
+                  <p class="project-description">Mini Project with awesome Python scripts</p>
+                  <p class="project-category">others</p>
                 </ul>
-              </a>
-            </li>
-            <li
-            class="project-item active"
-            data-filter-item
-            data-category="others"
-            >
-            <a href="https://github.com/ErfanRht/WhatsApp-spammer">
-              <ul class="content-card">
-                <div class="project-item-icon-box">
-                  <ion-icon name="logo-github"></ion-icon>
-                </div>
-                <h3 class="project-title">WhatsApp spammer</h3>
-                <p class="project-description">
-                  An open source python program that helps you to send a huge number of fake WhatsApp messages to people you want.
-                </p>
-                <p class="project-category">Python Program</p>
-              </ul>
-            </a>
-            </li>
-            </ul> -->
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/s4tyendra/sports-iiitk">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">sports-iiitk</h3>
+                  <p class="project-description">🏀 Repo for the Sports-IIITK website. Get the code for the coolest
+                    sports site at Indian Institute of Information Technology, Kota. (Forked from
+                    yashmangal112/sports-iiitk)</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/s4tyendra/satya.devh.in">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">satya.devh.in</h3>
+                  <p class="project-description">🌟 Code for the Satya.devh.in website!</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="others"><a
+                href="https://github.com/024x/REMINDER">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">REMINDER</h3>
+                  <p class="project-description">🕒 Reminds you about classes 15 minutes before they start
+                    (Mail+Telegram) so you can avoid being fashionably late!</p>
+                  <p class="project-category">others</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/024x/fake-payment-screenshot-telegram-bot">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">fake-payment-screenshot-telegram-bot</h3>
+                  <p class="project-description">💸 Create fake payment screenshots with PhonePe's dark mode because
+                    sometimes you just want to flex your imaginary wealth!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/024x/app-website">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">app-website</h3>
+                  <p class="project-description">📱 A relic of my app-hoarding days, this website showcases an app that
+                    no longer exists because apps come and go like trends!</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/024x/test-websockets">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">test-websockets</h3>
+                  <p class="project-description">🌐 Dive into the world of websockets with this repo. It's made with
+                    Flask, so it's as smooth as your favorite dance!</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="others"><a
+                href="https://github.com/024x/Search">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">Search</h3>
+                  <p class="project-description">🔍 Supercharge your searches with the power to perform multiple
+                    searches at once because Gen Z knows how to multitask!</p>
+                  <p class="project-category">others</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/024x/html-12-host">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">html-12-host</h3>
+                  <p class="project-description">🌐 Upload HTML files and get direct view links that last for 12 hours,
+                    just like a fleeting half of Instagram story!</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/024x/webapp">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">webapp</h3>
+                  <p class="project-description">🚀 The starting point for a test webapp that connects to multiple APIs.
+                    It's so cool even the VSCO girls would approve! Now maintained by @naveen-X</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/024x/server-installer">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">server-installer</h3>
+                  <p class="project-description">🚫 Install apps that are banned by hosting servers, because who wants
+                    to be bound by the rules of the establishment, maybe punishment, right?</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/024x/pocket-base-server-db">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">pocket-base-server-db</h3>
+                  <p class="project-description">🚀 Run this script to get your pocketbase DB server running! Just
+                    remember to change the admin password or you'll have a security situation on your hands!</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/024x/servepod">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">servepod</h3>
+                  <p class="project-description">🗣️ A simple echo with 'Websockets.' It's as hip as the latest TikTok
+                    trend, and it talks back to you!</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="others"><a
+                href="https://github.com/024x/empty">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">empty</h3>
+                  <p class="project-description">🌚 Yes, Empty! Because sometimes, less is more, just like your captions
+                    on Instagram!</p>
+                  <p class="project-category">others</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/024x/mongo-rgister-verify-flask">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">mongo-rgister-verify-flask</h3>
+                  <p class="project-description">✉️ Sign up users and verify their emails with Flask and MongoDB. It's
+                    so efficient, even Gen Z can't believe it!</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/dcg">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">Google Drive Uploader Telegram Bot</h3>
+                  <p class="project-description">🚀 Upload files to Google Drive through Telegram with style!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/im-Satyendra/filestream">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">filestream</h3>
+                  <p class="project-description">🌐 Stream files from Telegram on the internet, like having a free drive
+                    in the cloud!</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/im-Satyendra/mails">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">mails</h3>
+                  <p class="project-description">📋 A pastebin for the nostalgia. It can be easily deployed to deta.sh
+                    for a blast from the past!</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="others"><a
+                href="https://github.com/im-Satyendra/rdp">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">Heroku RDP script</h3>
+                  <p class="project-description">🖥️ Get RDP access on Heroku because sometimes you need a remote
+                    desktop on the cloud!</p>
+                  <p class="project-category">others</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/never1">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">never1</h3>
+                  <p class="project-description">📷 Send photos, get results, just like Google but with a twist! Plus,
+                    you can capture screenshots of webpages too!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/mtdc">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">mtdc</h3>
+                  <p class="project-description">🚀 Run multiple Telegram bots simultaneously and conquer the digital
+                    world!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="others"><a
+                href="https://github.com/im-Satyendra/Ransomware-builder">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">Ransomware-builder</h3>
+                  <p class="project-description">⚔️ Introducing 'Blood Eagle' - not open source, but it's educational!
+                    Please use responsibly.</p>
+                  <p class="project-category">others</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/notifychanges">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">notifychanges</h3>
+                  <p class="project-description">🕵️&zwj;♀️ Waiting for the JEE made easy! This bot notifies you when
+                    changes are detected on the NTA website.</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/answersbot">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">answersbot</h3>
+                  <p class="project-description">📢 A bot to broadcast answers during online exams because sharing is
+                    caring (at least during lockdown)!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/satya">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">satya</h3>
+                  <p class="project-description">📥 Download from almost all types of URLs using this Telegram bot.
+                    Fast, convenient, and it's like having your own download assistant!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/dx123">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">dx123</h3>
+                  <p class="project-description">🌐 A multiple data center hosting script for simple rename bots with
+                    thumbnails, just for you and your friends!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/otp">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">otp</h3>
+                  <p class="project-description">📱 Send SMS to your loved ones and stay connected, because who doesn't
+                    love a surprise message!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/uplnw">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">uplnw</h3>
+                  <p class="project-description">🚀 An amazing upload bot, because who can resist a free plan from
+                    Heroku!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/nopmjee">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">nopmjee</h3>
+                  <p class="project-description">📚 Sharing JEE courses for free with your team? This bot handles
+                    messages to prevent spam and keeps your team organized!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/answe">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">answe</h3>
+                  <p class="project-description">📖 Scrape answers from the web and send them to users. Perfect for
+                    online exams when you're in the zone!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/web-dl">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">web-dl</h3>
+                  <p class="project-description">📦 Download all files like a pro. Ever heard of HTTrack? It's like
+                    that, but even cooler!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/epsatya/eval">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">eval</h3>
+                  <p class="project-description">🐍 Run Python code right in the chat on Telegram! It's like having a
+                    mini Python playground in your pocket!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="others"><a
+                href="https://github.com/im-Satyendra/snplnotes">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">snplnotes</h3>
+                  <p class="project-description">📓 An index of inter notes from our class - because notes are life!</p>
+                  <p class="project-category">others</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="others"><a
+                href="https://github.com/im-Satyendra/stunning-octo-chainsaw">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">stunning-octo-chainsaw</h3>
+                  <p class="project-description">🔪 Just random stuff, because learning is an adventure!</p>
+                  <p class="project-category">others</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="others"><a
+                href="https://github.com/im-Satyendra/empety">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">empety</h3>
+                  <p class="project-description">🌑 Same as before, because sometimes, emptiness is the ultimate canvas
+                    for creativity!</p>
+                  <p class="project-category">others</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="others"><a
+                href="https://github.com/im-Satyendra/myo">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">myo</h3>
+                  <p class="project-description">🤷 Can do some stuff, but I'm still in confusion!</p>
+                  <p class="project-category">others</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="web development"><a
+                href="https://github.com/im-Satyendra/wflows">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">wflows</h3>
+                  <p class="project-description">📚 Upload and download notes with PHP - because knowledge should flow
+                    freely!</p>
+                  <p class="project-category">web development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/mention">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">mention</h3>
+                  <p class="project-description">🗣️ Mention all the members in a group and get the party started!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/vcpbot">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">vcpbot</h3>
+                  <p class="project-description">🎵 Get the party going in Telegram voice chats with this player bot!
+                  </p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/inlinefilesearch">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">inlinefilesearch</h3>
+                  <p class="project-description">🔍 Search channel files inline - because finding files should be a
+                    breeze!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/buggy">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">buggy</h3>
+                  <p class="project-description">🐛 Report bugs with style and extra features. It's like bug reporting
+                    on steroids! (In TG Groups)</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/unofficial">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">unofficial</h3>
+                  <p class="project-description">🦄 An unofficial collection of UB plugins. These are Python scripts
+                    that will make you go 'wow!'</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+            <li class="project-item active" data-filter-item="" data-category="bot development"><a
+                href="https://github.com/im-Satyendra/gpbot">
+                <ul class="content-card">
+                  <div class="project-item-icon-box"><ion-icon name="logo-github" role="img" class="md hydrated"
+                      aria-label="logo github"></ion-icon></div>
+                  <h3 class="project-title">gpbot</h3>
+                  <p class="project-description">🤖 Can't explain, you'll have to explore it yourself!</p>
+                  <p class="project-category">bot development</p>
+                </ul>
+              </a></li>
+          </ul>
         </section>
       </article>
 
@@ -1177,6 +1621,46 @@ loadingText.textContent = getRandomString();
         <section class="blog-posts">
           <ul class="blog-posts-list"></ul>
         </section>
+        <ul class="study-list">
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img loading="lazy" src="/assets/images/pip.png" alt="PiP" srcset="/assets/images/pip.png" height="150"
+                width="150">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">PIP Cheat Sheet: A Handy Guide for Python Package Management</h4>
+              <p class="service-item-text">
+                Whether you're a Python beginner or an experienced developer, mastering PIP is a game-changer for
+                managing your project dependencies. Learn how to install PIP, explore various PIP commands, and make the
+                most of Python's powerful package ecosystem.<a
+                  href="https://www.linkedin.com/posts/s4tyendra_python-pip-packagemanagement-activity-7098918521505480705-s6NA"
+                  target="_blank"><button class="btn-shine">
+                    <span class="kota-span">Read Post</span>
+                  </button></a>
+              </p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img loading="lazy" src="/assets/images/git.png" alt="GiT" srcset="/assets/images/git.png" height="150"
+                width="150">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Git Cheat Sheet for Windows</h4>
+              <p class="service-item-text">
+                Git is a distributed version control system that allows you to track and collaborate on your software
+                projects. Git was created by Linus Torvalds in 2005 to develop the Linux kernel. Git is open source,
+                scalable, secure, and fast. Some of the benefits of using Git are:<a
+                  href="https://www.linkedin.com/posts/s4tyendra_git-learn-easy-activity-7098913146555236352-iZq3"
+                  target="_blank"><button class="btn-shine">
+                    <span class="kota-span">Read Post</span>
+                  </button></a>
+              </p>
+            </div>
+          </li>
+        </ul>
       </article>
 
       <!--
@@ -1259,12 +1743,12 @@ loadingText.textContent = getRandomString();
 
 </html>
 <script>
-    const preloader = document.querySelector('.preloader');
-    window.addEventListener('load', () => {
-      // Remove the active class to hide the preloader
-        setTimeout(() => {
-            preloader.classList.remove('active');
-        }, 1500);
-       // preloader.classList.remove('active');
-    });
-    </script>
+  const preloader = document.querySelector('.preloader');
+  window.addEventListener('load', () => {
+    // Remove the active class to hide the preloader
+    setTimeout(() => {
+      preloader.classList.remove('active');
+    }, 1500);
+    // preloader.classList.remove('active');
+  });
+</script>
