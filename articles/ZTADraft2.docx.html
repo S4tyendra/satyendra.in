@@ -1,0 +1,3965 @@
+<html>
+
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      line-height: 1.2;
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.3em;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background-color: #f6f8fa;
+      border-radius: 3px;
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 85%;
+      margin: 0;
+      padding: 0.2em 0.4em;
+    }
+
+    pre {
+      background-color: #f6f8fa;
+      border-radius: 3px;
+      font-size: 85%;
+      line-height: 1.45;
+      overflow: auto;
+      padding: 16px;
+    }
+
+    blockquote {
+      border-left: 0.25em solid #dfe2e5;
+      color: #6a737d;
+      padding: 0 1em;
+      margin: 0 0 16px 0;
+    }
+
+    ul,
+    ol {
+      padding-left: 2em;
+      margin-bottom: 16px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #dfe2e5;
+      padding: 6px 13px;
+    }
+
+    table th {
+      background-color: #f6f8fa;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+  <style type="text/css">
+
+    ul.lst-kix_list_1-0 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_9-3 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_9-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_9-1 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_9-2 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_9-7 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_13-0>li {
+      counter-increment: lst-ctn-kix_list_13-0
+    }
+
+    ul.lst-kix_list_9-8 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_9-5 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_5-0>li {
+      counter-increment: lst-ctn-kix_list_5-0
+    }
+
+    ul.lst-kix_list_9-6 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_1-3 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_1-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_1-1 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_1-2 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_1-7 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_9-0 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_1-8 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_1-5 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_1-6 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_5-0>li:before {
+      content: "[" counter(lst-ctn-kix_list_5-0, decimal) "] "
+    }
+
+    .lst-kix_list_5-3>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_5-2>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_5-1>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_5-7>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_8-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_8-5 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_5-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_5-8>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_8-2 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_8-3 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_8-8 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_8-6 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_8-7 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_5-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_5-5>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_8-0 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_8-1 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_6-1>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_6-3>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_6-0>li:before {
+      content: "\0025cf   "
+    }
+
+    .lst-kix_list_6-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_3-0>li {
+      counter-increment: lst-ctn-kix_list_3-0
+    }
+
+    ol.lst-kix_list_4-0.start {
+      counter-reset: lst-ctn-kix_list_4-0 15
+    }
+
+    li.li-bullet-2:before {
+      margin-left: -27pt;
+      white-space: nowrap;
+      display: inline-block;
+      min-width: 27pt
+    }
+
+    .lst-kix_list_6-2>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_6-8>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_6-5>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_6-7>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_6-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_2-7>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_7-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_7-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_2-5>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_7-2>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_3-7 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_3-8 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_10-1>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_13-7>li:before {
+      content: "  "
+    }
+
+    ol.lst-kix_list_3-0.start {
+      counter-reset: lst-ctn-kix_list_3-0 6
+    }
+
+    ul.lst-kix_list_3-1 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_3-2 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_7-8>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_3-5 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_3-6 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_3-3 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_3-4 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_10-7>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_10-5>li:before {
+      content: "  "
+    }
+
+    li.li-bullet-1:before {
+      margin-left: -19pt;
+      white-space: nowrap;
+      display: inline-block;
+      min-width: 19pt
+    }
+
+    .lst-kix_list_10-3>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_11-7 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_11-6 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_4-1>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_11-5 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_11-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_11-3 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_11-2 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_11-1 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_11-0 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_9-2>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_4-3>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_4-5>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_11-8 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_9-0>li:before {
+      content: "\0025cf   "
+    }
+
+    .lst-kix_list_9-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_9-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_11-3>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_2-8 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_12-3>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_11-5>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_12-1>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_2-2 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_2-3 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_2-1 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_9-8>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_2-6 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_1-1>li:before {
+      content: "\0025cb   "
+    }
+
+    ul.lst-kix_list_2-7 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_11-7>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_2-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_2-5 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_10-0 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_1-3>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_13-3>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_10-8 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_10-7 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_1-7>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_10-6 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_10-5 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_10-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_10-3 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_1-5>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_10-2 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_10-1 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_13-5>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_12-5>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_12-7>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_2-1>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_2-3>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_13-1>li:before {
+      content: "  "
+    }
+
+    ol.lst-kix_list_3-0 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_3-0>li:before {
+      content: "[" counter(lst-ctn-kix_list_3-0, decimal) "] "
+    }
+
+    ul.lst-kix_list_5-7 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_5-8 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_3-1>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_3-2>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_5-5 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_5-6 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_8-1>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_4-0>li {
+      counter-increment: lst-ctn-kix_list_4-0
+    }
+
+    .lst-kix_list_8-2>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_3-5>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_3-4>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_5-3 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_3-3>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_5-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_5-1 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_8-0>li:before {
+      content: "\0025cf   "
+    }
+
+    ul.lst-kix_list_5-2 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_8-7>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_3-8>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_8-5>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_8-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_2-0>li {
+      counter-increment: lst-ctn-kix_list_2-0
+    }
+
+    .lst-kix_list_8-3>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_13-5 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_13-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_13-3 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_3-6>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_13-2 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_13-1 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_3-7>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_8-4>li:before {
+      content: "  "
+    }
+
+    ol.lst-kix_list_5-0.start {
+      counter-reset: lst-ctn-kix_list_5-0 24
+    }
+
+    .lst-kix_list_11-2>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_13-8 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_11-1>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_13-7 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_13-6 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_11-0>li:before {
+      content: "\0025cf   "
+    }
+
+    .lst-kix_list_8-8>li:before {
+      content: "  "
+    }
+
+    ol.lst-kix_list_2-0 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_4-8>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_4-7>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_4-8 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_4-6 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_4-7 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_4-1 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_4-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_4-5 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_4-2 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_4-3 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_12-6 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_12-5 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_12-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_12-3 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_12-2 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_12-1 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_12-0 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_12-8 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_12-7 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_7-0>li:before {
+      content: "\0025cf   "
+    }
+
+    ol.lst-kix_list_5-0 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_2-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_2-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_2-8>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_7-1>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_7-5>li:before {
+      content: "  "
+    }
+
+    ol.lst-kix_list_13-0 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_7-3>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_7-5 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_10-0>li:before {
+      content: "\0025cf   "
+    }
+
+    ul.lst-kix_list_7-6 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_7-3 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_7-4 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_13-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_13-8>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_7-7 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_7-8 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_7-1 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_7-2 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_7-0 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_7-7>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_10-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_10-8>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_4-0>li:before {
+      content: "[" counter(lst-ctn-kix_list_4-0, decimal) "] "
+    }
+
+    .lst-kix_list_10-2>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_4-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_4-2>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_4-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_9-3>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_10-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_9-1>li:before {
+      content: "  "
+    }
+
+    ol.lst-kix_list_4-0 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_9-7>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_11-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_12-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_9-5>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_6-6 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_6-7 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_6-4 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_6-5 {
+      list-style-type: none
+    }
+
+    ul.lst-kix_list_6-8 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_12-2>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_11-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_1-0>li:before {
+      content: "\0025cf   "
+    }
+
+    ul.lst-kix_list_6-2 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_11-8>li:before {
+      content: "  "
+    }
+
+    ul.lst-kix_list_6-3 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_1-2>li:before {
+      content: "  "
+    }
+
+    ol.lst-kix_list_2-0.start {
+      counter-reset: lst-ctn-kix_list_2-0 0
+    }
+
+    ul.lst-kix_list_6-0 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_12-0>li:before {
+      content: "\0025cf   "
+    }
+
+    ul.lst-kix_list_6-1 {
+      list-style-type: none
+    }
+
+    .lst-kix_list_1-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_13-0>li:before {
+      content: "" counter(lst-ctn-kix_list_13-0, decimal) ". "
+    }
+
+    ol.lst-kix_list_13-0.start {
+      counter-reset: lst-ctn-kix_list_13-0 0
+    }
+
+    .lst-kix_list_13-4>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_1-6>li:before {
+      content: "  "
+    }
+
+    li.li-bullet-0:before {
+      margin-left: -18pt;
+      white-space: nowrap;
+      display: inline-block;
+      min-width: 18pt
+    }
+
+    .lst-kix_list_2-0>li:before {
+      content: "[" counter(lst-ctn-kix_list_2-0, decimal) "] "
+    }
+
+    .lst-kix_list_12-6>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_1-8>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_2-2>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_13-2>li:before {
+      content: "  "
+    }
+
+    .lst-kix_list_12-8>li:before {
+      content: "  "
+    }
+
+    ol {
+      margin: 0;
+      padding: 0
+    }
+
+    table td,
+    table th {
+      padding: 0
+    }
+
+    .c37 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.3833333333333335;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 6pt
+    }
+
+    .c64 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.4083333333333332;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 28pt
+    }
+
+    .c46 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.3833333333333335;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 1pt
+    }
+
+    .c58 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.4791666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 33pt
+    }
+
+    .c52 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.4833333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 13pt
+    }
+
+    .c142 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.4291666666666665;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 5pt
+    }
+
+    .c122 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.4791666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 6pt
+    }
+
+    .c87 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.575;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 10pt
+    }
+
+    .c72 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.4083333333333332;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 43pt
+    }
+
+    .c98 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.4083333333333332;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c83 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.4833333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c172 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.4791666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c11 {
+      margin-left: 72pt;
+      padding-top: 0pt;
+      text-indent: 36pt;
+      padding-bottom: 0pt;
+      line-height: 0.8333333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      height: 11pt
+    }
+
+    .c94 {
+      margin-left: 0pt;
+      padding-top: 0pt;
+      list-style-position: inside;
+      text-indent: 45pt;
+      padding-bottom: 0pt;
+      line-height: 1.3833333333333335;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c24 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0083333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 22pt
+    }
+
+    .c74 {
+      padding-top: 0pt;
+      padding-left: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9541666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c73 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9791666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 36pt
+    }
+
+    .c134 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.1083333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 62pt
+    }
+
+    .c50 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9874999999999999;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 7pt
+    }
+
+    .c79 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0083333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 10pt
+    }
+
+    .c77 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.1083333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 15pt
+    }
+
+    .c12 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.3333333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      height: 11pt
+    }
+
+    .c48 {
+      margin-left: 36pt;
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.975;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c6 {
+      -webkit-text-decoration-skip: none;
+      color: #1155cc;
+      font-weight: 400;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      font-size: 14pt;
+      font-family: "Arial"
+    }
+
+    .c1 {
+      color: #000000;
+      font-weight: 700;
+      text-decoration: none;
+      vertical-align: baseline;
+      font-size: 36pt;
+      font-family: "Arial";
+      font-style: normal
+    }
+
+    .c66 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9833333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 9pt
+    }
+
+    .c15 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.8333333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      height: 11pt
+    }
+
+    .c56 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0583333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 6pt
+    }
+
+    .c18 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.1875;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      height: 11pt
+    }
+
+    .c96 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9916666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: justify;
+      margin-right: 3pt
+    }
+
+    .c28 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0416666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 2pt
+    }
+
+    .c3 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.2333333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      height: 11pt
+    }
+
+    .c35 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0291666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 17pt
+    }
+
+    .c20 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.06;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      height: 11pt
+    }
+
+    .c161 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0208333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 26pt
+    }
+
+    .c110 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0250000000000001;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 5pt
+    }
+
+    .c118 {
+      padding-top: 24pt;
+      padding-bottom: 6pt;
+      line-height: 0.8333333333333334;
+      page-break-after: avoid;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c47 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9874999999999999;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 6pt
+    }
+
+    .c19 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9833333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 5pt
+    }
+
+    .c105 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.4083333333333332;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 28pt
+    }
+
+    .c65 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0583333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 9pt
+    }
+
+    .c2 {
+      color: #000000;
+      font-weight: 400;
+      text-decoration: none;
+      vertical-align: baseline;
+      font-size: 14pt;
+      font-family: "Arial";
+      font-style: normal
+    }
+
+    .c129 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.4083333333333332;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      margin-right: 20pt
+    }
+
+    .c21 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.46249999999999997;
+      orphans: 2;
+      widows: 2;
+      text-align: left;
+      height: 11pt
+    }
+
+    .c171 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0541666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c104 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.375;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c70 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0916666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c103 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9166666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c133 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.8291666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c119 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0333333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c159 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.2166666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c5 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.08333333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c71 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.8333333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c154 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0250000000000001;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c158 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.1833333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c99 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.625;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c137 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.6666666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c115 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.55;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c153 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0416666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c168 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0625;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c95 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0583333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c126 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.2041666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c114 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.6208333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c123 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.4916666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c45 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.2249999999999999;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c100 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9833333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c53 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.6875;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c151 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.4458333333333335;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c124 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.4375;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c116 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9458333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c57 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9666666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c128 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.3833333333333335;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c0 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c163 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.2375;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c49 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.5958333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c85 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.4875;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c36 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.4791666666666667;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c150 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.25833333333333336;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c69 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.5;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c147 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.4541666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c143 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.45;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c75 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.3875;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c156 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.6916666666666668;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c148 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.39999999999999997;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c39 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9958333333333332;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c109 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.3083333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c82 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.75;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c149 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.47500000000000003;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c67 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.3958333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c112 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.5458333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c97 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.975;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c157 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9833333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: justify
+    }
+
+    .c76 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.7291666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c60 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0708333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c108 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.4833333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c140 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9791666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c138 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.4000000000000001;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c160 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.48333333333333334;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c111 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9708333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c78 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9874999999999999;
+      orphans: 2;
+      widows: 2;
+      text-align: justify
+    }
+
+    .c93 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0083333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c155 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.25;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c170 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.0791666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c33 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.5791666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c135 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.6500000000000001;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c55 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.41250000000000003;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c131 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.4458333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c136 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.1875;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c164 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.7666666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c86 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.8541666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c43 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.6958333333333333;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c51 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 1.6416666666666666;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c62 {
+      padding-top: 0pt;
+      padding-bottom: 0pt;
+      line-height: 0.9874999999999999;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .c14 {
+      color: #000000;
+      font-weight: 400;
+      text-decoration: none;
+      font-size: 10pt;
+      font-family: "Times New Roman"
+    }
+
+    .c23 {
+      font-weight: 400;
+      text-decoration: none;
+      font-size: 13pt;
+      font-family: "Arial"
+    }
+
+    .c32 {
+      text-decoration-skip-ink: none;
+      -webkit-text-decoration-skip: none;
+      color: #1155cc;
+      text-decoration: underline
+    }
+
+    .c8 {
+      font-size: 14pt;
+      font-family: "Arial";
+      color: #000000;
+      font-weight: 400
+    }
+
+    .c34 {
+      -webkit-text-decoration-skip: none;
+      color: #2e69b2;
+      text-decoration: underline;
+      text-decoration-skip-ink: none
+    }
+
+    .c7 {
+      font-size: 20pt;
+      font-weight: 700;
+      font-family: "Arial"
+    }
+
+    .c141 {
+      font-weight: 400;
+      font-size: 11pt;
+      font-family: "Times New Roman"
+    }
+
+    .c91 {
+      font-weight: 400;
+      font-size: 12.5pt;
+      font-family: "Arial"
+    }
+
+    .c16 {
+      font-size: 24pt;
+      font-weight: 700;
+      font-family: "Arial"
+    }
+
+    .c88 {
+      font-weight: 400;
+      font-size: 24pt;
+      font-family: "Times New Roman"
+    }
+
+    .c61 {
+      -webkit-text-decoration-skip: none;
+      text-decoration: underline;
+      text-decoration-skip-ink: none
+    }
+
+    .c29 {
+      font-weight: 400;
+      font-size: 12pt;
+      font-family: "Times New Roman"
+    }
+
+    .c26 {
+      font-size: 13.5pt;
+      font-family: "Arial";
+      font-weight: 400
+    }
+
+    .c30 {
+      font-size: 14pt;
+      font-weight: 400;
+      font-family: "Arial"
+    }
+
+    .c38 {
+      font-size: 17pt;
+      font-family: "Arial";
+      font-weight: 700
+    }
+
+    .c132 {
+      background-color: #ffffff;
+      max-width: 452pt;
+      padding: 72pt 72pt 72pt 72pt
+    }
+
+    .c152 {
+      margin-left: 18pt;
+      padding-left: 1pt
+    }
+
+    .c4 {
+      margin-left: 67pt;
+      padding-left: 0pt
+    }
+
+    .c17 {
+      color: inherit;
+      text-decoration: inherit
+    }
+
+    .c40 {
+      margin-left: 18pt;
+      padding-left: 0pt
+    }
+
+    .c84 {
+      margin-left: 18pt;
+      padding-left: 9pt
+    }
+
+    .c42 {
+      font-weight: 700;
+      font-family: "Arial"
+    }
+
+    .c9 {
+      vertical-align: baseline;
+      font-style: normal
+    }
+
+    .c41 {
+      margin-left: 31pt;
+      padding-left: 0pt
+    }
+
+    .c13 {
+      padding: 0;
+      margin: 0
+    }
+
+    .c165 {
+      font-weight: 400;
+      font-family: "Arial"
+    }
+
+    .c90 {
+      margin-left: 72pt;
+      text-indent: 36pt
+    }
+
+    .c144 {
+      margin-right: 40pt
+    }
+
+    .c166 {
+      margin-right: 31pt
+    }
+
+    .c162 {
+      margin-right: 55pt
+    }
+
+    .c113 {
+      margin-right: 16pt
+    }
+
+    .c106 {
+      margin-right: 37pt
+    }
+
+    .c27 {
+      text-decoration: none
+    }
+
+    .c139 {
+      font-size: 13pt
+    }
+
+    .c146 {
+      text-indent: 36pt
+    }
+
+    .c145 {
+      margin-right: 20pt
+    }
+
+    .c44 {
+      font-style: italic
+    }
+
+    .c102 {
+      margin-right: 7pt
+    }
+
+    .c59 {
+      margin-right: 2pt
+    }
+
+    .c130 {
+      margin-right: 8pt
+    }
+
+    .c167 {
+      margin-right: 41pt
+    }
+
+    .c31 {
+      font-size: 10pt
+    }
+
+    .c25 {
+      height: 11pt
+    }
+
+    .c54 {
+      margin-right: 1pt
+    }
+
+    .c169 {
+      margin-right: 5pt
+    }
+
+    .c81 {
+      font-size: 12pt
+    }
+
+    .c10 {
+      margin-left: 5pt
+    }
+
+    .c68 {
+      margin-right: 9pt
+    }
+
+    .c80 {
+      font-size: 23pt
+    }
+
+    .c107 {
+      margin-right: 22pt
+    }
+
+    .c117 {
+      margin-right: 21pt
+    }
+
+    .c101 {
+      margin-right: 32pt
+    }
+
+    .c92 {
+      margin-right: 17pt
+    }
+
+    .c89 {
+      margin-right: 11pt
+    }
+
+    .c63 {
+      margin-left: 36pt
+    }
+
+    .c127 {
+      margin-left: 41pt
+    }
+
+    .c120 {
+      color: #1155cc
+    }
+
+    .c125 {
+      margin-right: 4pt
+    }
+
+    .c22 {
+      color: #000000
+    }
+
+    .c121 {
+      padding-left: 0pt
+    }
+
+    .title {
+      padding-top: 24pt;
+      color: #000000;
+      font-weight: 700;
+      font-size: 36pt;
+      padding-bottom: 6pt;
+      font-family: "Times New Roman";
+      line-height: 1.0;
+      page-break-after: avoid;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    .subtitle {
+      padding-top: 18pt;
+      color: #666666;
+      font-size: 24pt;
+      padding-bottom: 4pt;
+      font-family: "Georgia";
+      line-height: 1.0;
+      page-break-after: avoid;
+      font-style: italic;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    li {
+      color: #000000;
+      font-size: 11pt;
+      font-family: "Times New Roman"
+    }
+
+    p {
+      margin: 0;
+      color: #000000;
+      font-size: 11pt;
+      font-family: "Times New Roman"
+    }
+
+    h1 {
+      padding-top: 24pt;
+      color: #000000;
+      font-weight: 700;
+      font-size: 24pt;
+      padding-bottom: 6pt;
+      font-family: "Times New Roman";
+      line-height: 1.0;
+      page-break-after: avoid;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    h2 {
+      padding-top: 18pt;
+      color: #000000;
+      font-weight: 700;
+      font-size: 18pt;
+      padding-bottom: 4pt;
+      font-family: "Times New Roman";
+      line-height: 1.0;
+      page-break-after: avoid;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    h3 {
+      padding-top: 14pt;
+      color: #000000;
+      font-weight: 700;
+      font-size: 14pt;
+      padding-bottom: 4pt;
+      font-family: "Times New Roman";
+      line-height: 1.0;
+      page-break-after: avoid;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    h4 {
+      padding-top: 12pt;
+      color: #000000;
+      font-weight: 700;
+      font-size: 12pt;
+      padding-bottom: 2pt;
+      font-family: "Times New Roman";
+      line-height: 1.0;
+      page-break-after: avoid;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    h5 {
+      padding-top: 11pt;
+      color: #000000;
+      font-weight: 700;
+      font-size: 11pt;
+      padding-bottom: 2pt;
+      font-family: "Times New Roman";
+      line-height: 1.0;
+      page-break-after: avoid;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+
+    h6 {
+      padding-top: 10pt;
+      color: #000000;
+      font-weight: 700;
+      font-size: 10pt;
+      padding-bottom: 2pt;
+      font-family: "Times New Roman";
+      line-height: 1.0;
+      page-break-after: avoid;
+      orphans: 2;
+      widows: 2;
+      text-align: left
+    }
+  </style>
+</head>
+
+<body class="c132 doc-content">
+  <div>
+    <p class="c0 c25"><span class="c9 c27 c22 c141"></span></p>
+  </div>
+  <p class="c25 c118 title" id="h.prd5jpp2z34y"><span class="c1"></span></p>
+  <p class="c118 title" id="h.a6oj7n8dopgf"><span class="c165">Rethinking Trust: A Zero Trust Architecture (ZTA)
+      Approach to Cybersecurity</span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c9 c27 c22 c29"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c15"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c25 c158"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c16 c22">Table of Contents</span></p>
+  <p class="c25 c155"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c42 c81">&nbsp; &nbsp;Abstract</span></p>
+  <p class="c25 c115"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c42 c81">&nbsp; &nbsp;Introduction</span></p>
+  <p class="c115 c25"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c42 c81">&nbsp; &nbsp;</span><span class="c42 c81 c22">Principles of ZTA</span></p>
+  <p class="c75 c25"><span class="c29 c9 c27 c22"></span></p>
+  <ul class="c13 lst-kix_list_1-0 start">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Core Principles</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_1-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Pillars of Zero Trust</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_1-1 start">
+    <li class="c0 c4 li-bullet-0"><span class="c23 c9 c22">Least-Privilege Access</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_1-1">
+    <li class="c0 c4 li-bullet-0"><span class="c23 c9 c22">Continuous Verification</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_1-1">
+    <li class="c0 c4 li-bullet-0"><span class="c23 c9 c22">Policy Enforcement</span></li>
+  </ul>
+  <p class="c33 c25"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c42 c81">&nbsp; &nbsp;</span><span class="c42 c81 c22">Components</span></p>
+  <p class="c25 c75"><span class="c29 c9 c27 c22"></span></p>
+  <ul class="c13 lst-kix_list_6-0 start">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Endpoint Security</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_6-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Data Security</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_6-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Identity Security</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_6-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Visibility and Analytics</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_6-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Automation</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_6-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Application Security</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_6-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Segmentation</span></li>
+  </ul>
+  <p class="c33 c25"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c42 c81">&nbsp; &nbsp;</span><span class="c42 c81 c22">Integration with Existing
+      Technologies</span></p>
+  <p class="c115 c25"><span class="c29 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c42 c81">&nbsp; &nbsp;</span><span class="c42 c81 c22">Implementation</span></p>
+  <p class="c75 c25"><span class="c29 c9 c27 c22"></span></p>
+  <ul class="c13 lst-kix_list_7-0 start">
+    <li class="c0 c41 li-bullet-0"><span class="c9 c27 c22 c91">Establishing Governance and Compliance</span></li>
+  </ul>
+  <p class="c21"><span class="c91 c9 c27 c22"></span></p>
+  <ul class="c13 lst-kix_list_7-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Encouraging Collaboration</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_7-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Comprehensive Assessment</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_7-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Developing an Adoption Plan</span></li>
+  </ul>
+  <p class="c25 c55"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_7-0">
+    <li class="c0 c41 li-bullet-0"><span class="c23 c9 c22">Pilot and Adjust</span></li>
+  </ul>
+  <p class="c0"><span class="c42 c81 c22">Security Monitoring and Incident Response</span></p>
+  <p class="c75 c25"><span class="c14 c9"></span></p>
+  <ul class="c13 lst-kix_list_8-0 start">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Continuous Monitoring</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_8-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Building Early and Incremental Implementation</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_8-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Addressing Challenges</span></li>
+  </ul>
+  <p class="c25 c33"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c42 c81 c22">Use Cases</span></p>
+  <p class="c75 c25"><span class="c14 c9"></span></p>
+  <ul class="c13 lst-kix_list_9-0 start">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Testing Scenarios</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_9-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Dynamic Access Management</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_9-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Phased Implementation</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_9-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Secure Remote Access</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_9-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Risk Assessment and Policy Formulation</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_9-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Security Posture Modernization</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_9-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Supporting a Hybrid Workforce</span></li>
+  </ul>
+  <p class="c33 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c42 c81 c22">Benefits of ZTA</span></p>
+  <p class="c75 c25"><span class="c14 c9"></span></p>
+  <ul class="c13 lst-kix_list_10-0 start">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Enhanced Security</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c9 c22 c23"></span></p>
+  <ul class="c13 lst-kix_list_10-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Cost Efficiency</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_10-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Improved Employee Experience</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_10-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Robust Compliance and Governance</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_10-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Continuous Monitoring and Adaptability</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_10-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Micro-Segmentation</span></li>
+  </ul>
+  <p class="c33 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c42 c22 c81">Criticisms and Limitations</span></p>
+  <p class="c75 c25"><span class="c14 c9"></span></p>
+  <ul class="c13 lst-kix_list_11-0 start">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Technical Challenges</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_11-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Financial Constraints</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_11-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">User Resistance</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_11-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Complexity and Adoption</span></li>
+  </ul>
+  <p class="c33 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c42 c81 c22">Evolving Threat Landscape</span></p>
+  <p class="c115 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c42 c81 c22">Future of Zero Trust</span></p>
+  <p class="c75 c25"><span class="c14 c9"></span></p>
+  <ul class="c13 lst-kix_list_12-0 start">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Trends Shaping Zero Trust</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_12-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Increased Adoption in Enterprises</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_12-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Integration of Emerging Technologies</span></li>
+  </ul>
+  <p class="c55 c25"><span class="c23 c9 c22"></span></p>
+  <ul class="c13 lst-kix_list_12-0">
+    <li class="c0 c40 li-bullet-0"><span class="c23 c9 c22">Challenges Ahead</span></li>
+  </ul>
+  <p class="c0"><span class="c16">1.Abstract</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c137"><span class="c14 c9"></span></p>
+  <p class="c111"><span class="c8">Zero Trust Architecture (ZTA) represents a transformative approach to cybersecurity
+      that challenges conventional security paradigms by eliminating implicit trust within networks. The framework has
+      become increasingly relevant, particularly as organizations adapt to evolving digital landscapes and remote work
+      scenarios accelerated by the COVID-19 pandemic.</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/blog/2022/04/14/a-clearer-lens-on-zero-trust-security-strategy-part-1/&amp;sa=D&amp;source=editors&amp;ust=1733983630218038&amp;usg=AOvVaw1IrzLBM97dnUrEqrQZOIYj">[1][2]</a></span><span
+      class="c8">&nbsp;At its foundation, ZTA employs principles such as least-privilege access, persistent
+      authentication, and comprehensive policy enforcement.</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.nist.gov/publications/zero-trust-architecture&amp;sa=D&amp;source=editors&amp;ust=1733983630218355&amp;usg=AOvVaw2eIbrzi75O60NMTUZYEDe6">[3]</a></span><span
+      class="c8 c61"><a class="c17"
+        href="https://www.google.com/url?q=https://www.nist.gov/publications/zero-trust-architecture&amp;sa=D&amp;source=editors&amp;ust=1733983630218539&amp;usg=AOvVaw2K00WLqt2tLvc281aSUT1D">&nbsp;</a></span><span
+      class="c8">The framework&#39;s importance has been further reinforced by authoritative guidelines, particularly
+      those from the National Institute of Standards and Technology (NIST), which provide organizations with structured
+      approaches for implementation.</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ExecutiveSummary.html&amp;sa=D&amp;source=editors&amp;ust=1733983630218845&amp;usg=AOvVaw0YvQQjlCrZN491j7mCYodh">[4]</a></span><span
+      class="c8 c61"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ExecutiveSummary.html&amp;sa=D&amp;source=editors&amp;ust=1733983630219054&amp;usg=AOvVaw2-OgBfbjqoDePMKtqKZQBE">&nbsp;</a></span>
+  </p>
+  <p class="c111 c25"><span class="c2"></span></p>
+  <p class="c54 c100"><span class="c8">While ZTA offers substantial benefits, its implementation presents significant
+      challenges. </span><span class="c30">T</span><span class="c8">he dynamic nature of cybersecurity threats continues
+      to test the effectiveness of Zero Trust implementations.</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.fortinet.com/resources/cyberglossary/what-is-the-zero-trust-network-security-model&amp;sa=D&amp;source=editors&amp;ust=1733983630219655&amp;usg=AOvVaw0gedXoWzkSytCzj3i_JQNa">[5][6][7]</a></span><span
+      class="c8 c61"><a class="c17"
+        href="https://www.google.com/url?q=https://www.fortinet.com/resources/cyberglossary/what-is-the-zero-trust-network-security-model&amp;sa=D&amp;source=editors&amp;ust=1733983630219925&amp;usg=AOvVaw3OLUhACUf6I8VtUGONc2iL">&nbsp;</a></span><span
+      class="c8">Looking ahead, while ZTA&#39;s future appears promising, it demands continuous evolution and steadfast
+      dedication to security excellence.</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.ibm.com/think/insights/the-evolution-of-zero-trust-and-the-frameworks-that-guide-it&amp;sa=D&amp;source=editors&amp;ust=1733983630220310&amp;usg=AOvVaw3UToUZfYACOEjjt3V3mO5H">[8][9]</a></span>
+  </p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c168"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c16">2.Introduction</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c45"><span class="c14 c9"></span></p>
+  <p class="c125 c153"><span class="c26 c22">The inception of Zero Trust Architecture (ZTA) represents a pivotal shift
+      from conventional perimeter-based security approaches, which showed limitations from their early implementation.
+      The formation of the Jericho Forum&reg; marked a significant milestone in this evolution, as security experts
+      united to pioneer new information security paradigms in response to emerging technological challenges.</span><span
+      class="c32 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://www.forbes.com/sites/zscaler/2024/04/15/7-elements-of-a-highly-successful-zero-trust-architecture/&amp;sa=D&amp;source=editors&amp;ust=1733983630221518&amp;usg=AOvVaw1ZYeHJuVgGZTOnma0aF2KW">[10]</a></span>
+  </p>
+  <p class="c25 c156"><span class="c14 c9"></span></p>
+  <p class="c70 c107"><span class="c26 c22">The vision for this transformation was notably championed by Jericho
+      Forum&reg; founding member Steve Whitlock, who emphasized the growing gaps between traditional security models and
+      the evolving landscape of digital vulnerabilities.</span><span class="c32 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://www.forbes.com/sites/zscaler/2024/04/15/7-elements-of-a-highly-successful-zero-trust-architecture/&amp;sa=D&amp;source=editors&amp;ust=1733983630222157&amp;usg=AOvVaw3oMmg71Sne9-RykGqd0u7L">[10]</a></span>
+  </p>
+  <p class="c25 c114"><span class="c14 c9"></span></p>
+  <p class="c39 c68"><span class="c8">The shift toward digital transformation and remote operations, catalyzed
+      significantly by the COVID-19 pandemic, heightened the urgency for enhanced security frameworks. This evolution
+      drove organizations to embrace Zero Trust principles, fundamentally built on the &quot;assume breach&quot; mindset
+      &ndash; a philosophy that mandates thorough verification of every access attempt, regardless of its
+      source.</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/blog/2022/04/14/a-clearer-lens-on-zero-trust-security-strategy-part-1/&amp;sa=D&amp;source=editors&amp;ust=1733983630222860&amp;usg=AOvVaw0QunOxmJDTcK7_SSg3BhPg">[2]</a></span>
+  </p>
+  <p class="c50"><span class="c8">The standardization of Zero Trust principles has been significantly advanced by the
+      National Institute of Standards and Technology (NIST), particularly through their comprehensive NIST SP 800-207
+      publication.</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.nist.gov/publications/zero-trust-architecture&amp;sa=D&amp;source=editors&amp;ust=1733983630223266&amp;usg=AOvVaw23pnEW3Ehx_v23a65wXH99">[2][3]</a></span><span
+      class="c8 c61"><a class="c17"
+        href="https://www.google.com/url?q=https://www.nist.gov/publications/zero-trust-architecture&amp;sa=D&amp;source=editors&amp;ust=1733983630223509&amp;usg=AOvVaw1J7vYwkvZm9rngJpzaf_6_">&nbsp;</a></span><span
+      class="c8">Working alongside industry experts, NIST has developed extensive frameworks and guidelines that
+      facilitate the seamless implementation of Zero Trust capabilities, enabling organizations to evolve their security
+      posture in alignment with contemporary threats.</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ExecutiveSummary.html&amp;sa=D&amp;source=editors&amp;ust=1733983630223791&amp;usg=AOvVaw0qH-Sgl1ex7VJu3rleLDtT">[4]</a></span>
+  </p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c147"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c42 c80">3.</span><span class="c42 c80 c22">Principles of ZTA</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c51"><span class="c14 c9"></span></p>
+  <p class="c93"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 704.37px; height: 422.67px;"><img
+        alt="" src="images/image4.png"
+        style="width: 704.37px; height: 422.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c11"><span class="c14 c9"></span></p>
+  <p class="c71 c90"><span class="c31">Source: </span><span class="c32 c31"><a class="c17"
+        href="https://www.google.com/url?q=https://pixelplex.io/blog/how-to-implement-zero-trust/&amp;sa=D&amp;source=editors&amp;ust=1733983630224977&amp;usg=AOvVaw2nMJ2-1ztBlf_C7q0G17gL">How
+        to Implement Zero Trust Architecture in 5 Steps [Checklist]</a></span></p>
+  <p class="c11"><span class="c2"></span></p>
+  <p class="c93"><span class="c8">Zero Trust Architecture (ZTA) establishes a comprehensive security framework built on
+      fundamental principles that govern its implementation across organizations. These principles emphasize eliminating
+      implicit trust while ensuring rigorous security protocols for all IT resource interactions.</span></p>
+  <p class="c18"><span class="c14 c9"></span></p>
+  <p class="c0 c10"><span class="c38">3.1 </span><span class="c38 c22">Core Principles</span></p>
+  <p class="c97 c25"><span class="c14 c9"></span></p>
+  <p class="c93 c145"><span class="c8">The foundational principles of ZTA integrate seamlessly with organizational
+      objectives, encompassing risk management strategies and security best practices. These principles are crucial for
+      navigating the complexities of modern digital infrastructures and emerging threats.</span></p>
+  <p class="c18"><span class="c14 c9"></span></p>
+  <p class="c0 c10"><span class="c38">3.2 </span><span class="c38 c22">Pillars of Zero Trust</span></p>
+  <p class="c97 c25"><span class="c14 c9"></span></p>
+  <p class="c77"><span class="c8">The Zero Trust framework is structured around either five or seven essential pillars,
+      as standardized by the U.S. Government. The five primary pillars are:</span></p>
+  <p class="c25 c49"><span class="c14 c9"></span></p>
+  <ol class="c13 lst-kix_list_13-0 start" start="1">
+    <li class="c0 c63 c121 li-bullet-0"><span class="c2">Identity</span></li>
+  </ol>
+  <p class="c20"><span class="c2"></span></p>
+  <ol class="c13 lst-kix_list_13-0" start="2">
+    <li class="c74 c63 li-bullet-0"><span class="c2">Device</span></li>
+  </ol>
+  <p class="c20"><span class="c2"></span></p>
+  <ol class="c13 lst-kix_list_13-0" start="3">
+    <li class="c74 c63 li-bullet-0"><span class="c2">Network/Environment</span></li>
+  </ol>
+  <p class="c20"><span class="c2"></span></p>
+  <ol class="c13 lst-kix_list_13-0" start="4">
+    <li class="c63 c74 li-bullet-0"><span class="c2">Application and Workload</span></li>
+  </ol>
+  <p class="c20"><span class="c2"></span></p>
+  <ol class="c13 lst-kix_list_13-0" start="5">
+    <li class="c0 c63 c121 li-bullet-0"><span class="c2">Data</span></li>
+  </ol>
+  <p class="c25 c133"><span class="c14 c9"></span></p>
+  <p class="c134"><span class="c8">These pillars function as critical verification points, ensuring comprehensive
+      authentication for all entities seeking resource access</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ProjectOverview.html&amp;sa=D&amp;source=editors&amp;ust=1733983630227191&amp;usg=AOvVaw1Yqn_xrmr0OgOD7aZxWatW">[5]</a></span><span
+      class="c2">.</span></p>
+  <p class="c25 c171"><span class="c14 c9"></span></p>
+  <p class="c0 c127"><span class="c38">3.2.1 </span><span class="c38 c22">Least-Privilege Access</span></p>
+  <p class="c25 c48"><span class="c14 c9"></span></p>
+  <p class="c39 c63 c125"><span class="c8">The principle of least-privilege access stands as a cornerstone of ZTA
+      implementation. This approach restricts user and device permissions to the minimum necessary for performing
+      authorized tasks. By minimizing access points to sensitive data, organizations can simultaneously enhance security
+      and operational efficiency through streamlined authentication management</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.csoonline.com/article/564201/what-is-zero-trust-a-model-for-more-effective-security.html&amp;sa=D&amp;source=editors&amp;ust=1733983630227996&amp;usg=AOvVaw2lnKAzu0NoEZ3TLtgNt4GK">[6]</a></span><span
+      class="c2">.</span></p>
+  <p class="c25 c126"><span class="c14 c9"></span></p>
+  <p class="c0 c127"><span class="c38">3.2.2 </span><span class="c38 c22">Continuous Verification</span></p>
+  <p class="c48 c25"><span class="c14 c9"></span></p>
+  <p class="c0 c63"><span class="c26 c22">Zero Trust architecture mandates continuous verification, rejecting any
+      assumption of</span><span class="c31">&nbsp;</span><span class="c8">trust. This principle requires consistent
+      authentication of users and devices during each session before granting access to applications or data. The
+      implementation relies on robust multi-factor authentication protocols and comprehensive endpoint verification
+      mechanisms</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeB/ZeroTrustTakeaways.html&amp;sa=D&amp;source=editors&amp;ust=1733983630228807&amp;usg=AOvVaw2semvAtbWVBWm57La7quCy">[7][8]</a></span><span
+      class="c2">.</span></p>
+  <p class="c18"><span class="c14 c9"></span></p>
+  <p class="c0 c63"><span class="c38">3.2.3 </span><span class="c38 c22">Policy Enforcement</span></p>
+  <p class="c48 c25"><span class="c14 c9"></span></p>
+  <p class="c39 c63"><span class="c8">Policy enforcement serves as a critical control mechanism within ZTA. This
+      principle involves evaluating access rights based on verified identity credentials and contextual parameters
+      before establishing application connections. The process enables dynamic, conditional access decisions that
+      strengthen the overall security framework</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://blog.1password.com/history-of-zero-trust/&amp;sa=D&amp;source=editors&amp;ust=1733983630229583&amp;usg=AOvVaw0UoDQgVPvEbZvmLJy83Jym">[9][11]</a></span><span
+      class="c2">.</span></p>
+  <p class="c82 c25 c63"><span class="c14 c9"></span></p>
+  <p class="c63 c119"><span class="c8">Through consistent application of these key principles, organizations can
+      successfully implement and maintain Zero Trust Architecture, creating a resilient security environment capable of
+      addressing contemporary and emerging threats.</span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c93 c25"><span class="c14 c9"></span></p>
+  <p class="c0 c10"><span class="c16">4.</span><span class="c16 c22">Components</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c138 c25"><span class="c14 c9"></span></p>
+  <p class="c138"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 704.37px; height: 504.00px;"><img
+        alt="" src="images/image2.png"
+        style="width: 704.37px; height: 504.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c71 c90"><span class="c31">Source: </span><span class="c32 c31"><a class="c17"
+        href="https://www.google.com/url?q=https://pixelplex.io/blog/how-to-implement-zero-trust/&amp;sa=D&amp;source=editors&amp;ust=1733983630231106&amp;usg=AOvVaw0JXtHbq4siyw4uSg8JGeKR">How
+        to Implement Zero Trust Architecture in 5 Steps [Checklist]</a></span></p>
+  <p class="c11"><span class="c14 c9"></span></p>
+  <p class="c93 c10 c125"><span class="c8">Zero Trust Architecture (ZTA) is built on a variety of components that work
+      together to enhance security and ensure that access to resources is strictly controlled. These components can be
+      categorized into several key pillars, each serving a distinct purpose within the architecture.</span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c86"><span class="c14 c9"></span></p>
+  <p class="c0 c10"><span class="c7">4.1 </span><span class="c7 c22">Endpoint Security</span></p>
+  <p class="c0 c25 c10"><span class="c14 c9"></span></p>
+  <p class="c39 c10 c117"><span class="c8">Endpoint security verifies the legitimacy of devices attempting to access the
+      network. This component monitors the health and compliance of user-controlled devices as well as autonomous
+      devices, such as Internet of Things (IoT) devices. Effective endpoint security is crucial for preventing
+      unauthorized devices from gaining access to critical resources</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.strongdm.com/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630232348&amp;usg=AOvVaw3JsDOuAwyLLFdeIlReDzxy">[12]</a></span><span
+      class="c2">.</span></p>
+  <p class="c39 c25 c10 c117"><span class="c2"></span></p>
+  <p class="c85 c25"><span class="c14 c9"></span></p>
+  <p class="c0 c10"><span class="c7">4.2 </span><span class="c7 c22">Data Security</span></p>
+  <p class="c0 c25 c10"><span class="c42 c9 c27 c31 c22"></span></p>
+  <p class="c39 c130 c10"><span class="c8">The data security pillar focuses on protecting sensitive information by
+      categorizing and isolating data based on its criticality to the organization. Access to data is enforced strictly,
+      permitting only authorized users to interact with it. This process includes defining a comprehensive data
+      management strategy to safeguard against unauthorized access while ensuring compliance with relevant
+      regulations</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.strongdm.com/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630233201&amp;usg=AOvVaw1B1Wkqv4a48xfhU1_UbP4F">[12]</a></span><span
+      class="c2">.</span></p>
+  <p class="c39 c25 c10 c130"><span class="c2"></span></p>
+  <p class="c25 c123"><span class="c14 c9"></span></p>
+  <p class="c0 c10"><span class="c7">4.3 </span><span class="c7 c22">Identity Security</span></p>
+  <p class="c0 c25 c10"><span class="c42 c9 c27 c31 c22"></span></p>
+  <p class="c10 c24"><span class="c8">Identity security is fundamental to ZTA and involves the use of authentication and
+      access control policies to identify and validate users attempting to connect</span><span class="c2">&nbsp;</span>
+  </p>
+  <p class="c24 c25 c10"><span class="c2"></span></p>
+  <p class="c24 c25 c10"><span class="c2"></span></p>
+  <p class="c24 c10"><span class="c8">to the network. This component relies on dynamic and contextual data analysis,
+    </span></p>
+  <p class="c24 c10"><span class="c8">employing techniques such as Role-Based Access Control (RBAC) and</span></p><a
+    id="id.30j0zll"></a>
+  <p class="c24 c10"><span class="c8">Attribute-Based Access Control (ABAC) to ensure that only authorized users gain
+      access to resources at the appropriate times</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.strongdm.com/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630234575&amp;usg=AOvVaw3qKowtNOJGgtqGbt7RwmRE">[12]</a></span><span
+      class="c2">.</span></p>
+  <p class="c24 c25 c10"><span class="c2"></span></p>
+  <p class="c12"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">4.4 </span><span class="c7 c22">Visibility and Analytics</span></p>
+  <p class="c0 c25"><span class="c42 c9 c27 c31 c22"></span></p>
+  <p class="c39"><span class="c8">Visibility into the various security processes is essential for effective threat
+      detection and response. This component provides insights into user and system behaviors, enabling organizations to
+      monitor access control, segmentation, and encryption activities. Enhanced visibility facilitates informed security
+      decisions and helps orga-nizations adapt to evolving threats in real time</span><span class="c34 c30"><a
+        class="c17"
+        href="https://www.google.com/url?q=https://www.strongdm.com/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630235397&amp;usg=AOvVaw1rLDkj5zPyn-k_z-RluLV2">[12]</a></span><span
+      class="c2">.</span></p>
+  <p class="c25 c39"><span class="c2"></span></p>
+  <p class="c123 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">4.5 </span><span class="c7 c22">Automation</span></p>
+  <p class="c0 c25"><span class="c42 c9 c27 c31 c22"></span></p>
+  <p class="c93 c102"><span class="c8">Automation within ZTA improves scalability and efficiency by reducing human error
+      and consistently applying security policies across the enterprise. By automating manual processes, organizations
+      can ensure that security measures are uniformly implemented, thereby enhancing overall protection</span><span
+      class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.strongdm.com/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630236216&amp;usg=AOvVaw1fUvySE64-F529huuzZpIb">[12]</a></span><span
+      class="c2">.</span></p>
+  <p class="c93 c102 c25"><span class="c2"></span></p>
+  <p class="c36 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">4.6 </span><span class="c7 c22">Application Security</span></p>
+  <p class="c0 c25"><span class="c42 c9 c27 c31 c22"></span></p>
+  <p class="c39 c92"><span class="c8">Application security encompasses both on-premise and cloud-based systems. It is
+      crucial for protecting workloads and ensuring that only authenticated users can access applications. Security
+      measures wrap around each workload, preventing unauthorized data access and ensuring the integrity of application
+      interactions across the network</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.strongdm.com/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630237048&amp;usg=AOvVaw3m9Vhh1Snl9jkl-nZbdSGB">[12]</a></span><span
+      class="c2">.</span></p>
+  <p class="c39 c25 c92"><span class="c2"></span></p>
+  <p class="c20"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">4.7 </span><span class="c7 c22">Segmentation</span></p>
+  <p class="c0 c25"><span class="c42 c9 c27 c31 c22"></span></p>
+  <p class="c39 c59"><span class="c8">Segmentation is a critical strategy within ZTA that isolates resources and
+      enforces controlled access through tightly managed gateways. This includes micro-segmen-tation, which further
+      refines access control by isolating workloads from one another. Such measures enhance security by minimizing
+      direct exposure of sensitive data and systems to unauthorized users</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.strongdm.com/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630237831&amp;usg=AOvVaw3svM0ksPbvEvCGGD7uJksR">[12]</a></span><span
+      class="c2">.</span></p>
+  <p class="c39 c25 c59"><span class="c2"></span></p>
+  <p class="c25 c85"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c16">5.Integration with Existing Technologies</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c3"><span class="c9 c27 c31 c22 c42"></span></p>
+  <p class="c3"><span class="c42 c9 c27 c31 c22"></span></p>
+  <p class="c111 c107"><span class="c8">When deploying ZTA, organizations must assess their existing security
+      technologies and determine how these can be integrated or repurposed. This involves inventorying current assets
+      and understanding the criticality of each component to ensure that new investments align with and enhance existing
+      security measures</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://sechard.com/blog/challenges-faced-by-organizations-while-migrating-to-a-zero-trust-architecture/&amp;sa=D&amp;source=editors&amp;ust=1733983630239049&amp;usg=AOvVaw2fEsPM_kId2Sac7Uwhueum">[7][13]</a></span><span
+      class="c8">. By leveraging existing technologies, organizations can achieve cost savings while maintaining robust
+      security postures</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.fortinet.com/resources/cyberglossary/what-is-the-zero-trust-network-security-model&amp;sa=D&amp;source=editors&amp;ust=1733983630239369&amp;usg=AOvVaw1RSrhy2WiKyUDU123MrfXU">[7]</a></span><span
+      class="c2">.</span></p>
+  <p class="c20"><span class="c14 c9"></span></p>
+  <p class="c96"><span class="c8">These components collectively contribute to a comprehensive Zero Trust framework that
+      helps organizations protect their resources from a range of security threats while enabling secure access to data
+      and applications.</span></p>
+  <p class="c25 c96"><span class="c14 c9"></span></p>
+  <p class="c96 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c16">6.</span><span class="c16 c22">Implementation</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c71"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 687.03px; height: 452.00px;"><img
+        alt="" src="images/image3.png"
+        style="width: 687.03px; height: 452.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c71 c90"><span class="c31">Source: </span><span class="c31 c32"><a class="c17"
+        href="https://www.google.com/url?q=https://securdi.com/zero-trust/zero-trust-architecture-key-components-and-considerations/&amp;sa=D&amp;source=editors&amp;ust=1733983630240940&amp;usg=AOvVaw3Z5Ypfs3qvu5xuxso3kHX9">Zero
+        Trust Architecture: Key Components and Considerations</a></span></p>
+  <p class="c11"><span class="c14 c9"></span></p>
+  <p class="c0 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">6.1 </span><span class="c7 c22">Establishing Governance and Compliance</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c66"><span class="c8">To successfully implement Zero Trust Architecture (ZTA), organizations must develop a
+      governance and compliance framework that aligns with industry standards and regulatory requirements. This
+      framework should define policies, procedures, and controls aimed at protecting data and systems from unauthorized
+      access and other risks</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630241815&amp;usg=AOvVaw0ohADXHCcYN4fnvbdT07Us">[14]</a></span><span
+      class="c8">. Mechanisms for tracking compliance metrics and conducting regular audits are essential to address any
+      non-compliance issues promptly</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630242158&amp;usg=AOvVaw0Ejo0MoVXvtGgVjS5DfYrR">[14]</a></span><span
+      class="c2">.</span></p>
+  <p class="c25 c66"><span class="c2"></span></p>
+  <p class="c25 c69"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">6.2 </span><span class="c7 c22">Encouraging Collaboration</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c39 c54"><span class="c8">Collaboration among teams is crucial for ZTA adoption. Organizations should foster
+      cross-functional communication between IT, security, and business units to enhance understanding and share
+      challenges</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630243013&amp;usg=AOvVaw0mFxufDB8PqesS5ZQ7KhZT">[14]</a></span><span
+      class="c8">. Establishing forums and workshops can facilitate knowledge sharing and promote lessons learned
+      throughout the adoption process</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630243265&amp;usg=AOvVaw2yNCTkKHCCypDhMW5ckCtB">[14]</a></span><span
+      class="c2">.</span></p>
+  <p class="c39 c25 c54"><span class="c2"></span></p>
+  <p class="c123 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">6.3 </span><span class="c7 c22">Comprehensive Assessment</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c95"><span class="c26 c22">Before adopting ZTA, a thorough evaluation of the current IT infrastructure,
+      applica-tions, and data assets is necessary. This assessment helps identify dependencies, technical debt, and
+      potential compatibility issues, which can inform the adoption plan and help prioritize workloads based on
+      criticality and business impact</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630243955&amp;usg=AOvVaw2LDlrnZTPbmRAiU_AVxJHy">[14]</a></span><span
+      class="c26 c9 c27 c22">.</span></p>
+  <p class="c95 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c55 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">6.4 </span><span class="c7 c22">Developing an Adoption Plan</span></p>
+  <p class="c148 c25"><span class="c14 c9"></span></p>
+  <p class="c28"><span class="c26 c22">A detailed adoption plan is essential for guiding the transition to ZTA. This
+      plan should outline the step-by-step approach for migrating workloads, applications, and data to the cloud,
+      defining phases, timelines, and dependencies</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630244658&amp;usg=AOvVaw09Y4zbY215SFO4isElBt-C">[14]</a></span><span
+      class="c26 c22">. Engaging key stakeholders and allocating resources effectively is critical during this
+      phase</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630244977&amp;usg=AOvVaw2zQiyixXHlyq89ANFMbVpo">[14]</a></span><span
+      class="c26 c9 c27 c22">.</span></p>
+  <p class="c28 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c28 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c28 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c28 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c28 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c131 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">6.5 </span><span class="c7 c22">Pilot and Adjust</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c70 c54"><span class="c26 c22">Organizations should consider piloting their ZTA approach and making
+      adjustments based on feedback and results. This agile methodology allows for optimization of processes and builds
+      confidence among stakeholders as progress is made</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://learn.microsoft.com/en-us/security/zero-trust/adopt/rapidly-modernize-security-posture&amp;sa=D&amp;source=editors&amp;ust=1733983630246095&amp;usg=AOvVaw1IIsIg49nZVfmJZeiTphA1">[15]</a></span><span
+      class="c26 c9 c27 c22">.</span></p>
+  <p class="c25 c104"><span class="c14 c9"></span></p>
+  <p class="c0 c25"><span class="c16 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c16">7.Security Monitoring and Incident Response</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c0 c25"><span class="c7 c9 c27 c22"></span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c65"><span class="c26 c22">Implementing a robust security monitoring and incident response program in the
+      cloud environment is vital. Utilizing cloud-native security tools enables real-time threat detection and automated
+      incident responses</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630247151&amp;usg=AOvVaw0CWlRn47YT-PxLLOzyWVOe">[14]</a></span><span
+      class="c26 c22">. Establishing clear incident response procedures and continuously monitoring for anomalies can
+      enhance the</span><span class="c26">&nbsp;</span><a id="id.1fob9te"></a><span class="c8">organization&rsquo;s
+      security posture</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630247581&amp;usg=AOvVaw1_PNY4JgYpEQz3AmRAa6h4">[14]</a></span><span
+      class="c2">.</span></p>
+  <p class="c25 c65"><span class="c2"></span></p>
+  <p class="c25 c53"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">7.1 </span><span class="c7 c22">Continuous Monitoring</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c79"><span class="c8">To detect and respond to security incidents effectively, organizations should
+      imple-ment continuous monitoring practices. Advanced security analytics tools can monitor user behavior, network
+      traffic, and system activities, ensuring timely responses to potential incidents</span><span class="c34 c30"><a
+        class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630248442&amp;usg=AOvVaw1SeVjt7Ex0eXITXF8clgsK">[14]</a></span><span
+      class="c2">.</span></p>
+  <p class="c79 c25"><span class="c2"></span></p>
+  <p class="c25 c149"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">7.2 </span><span class="c7 c22">Building Early and Incremental Implementation</span>
+  </p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c24"><span class="c8">Organizations are encouraged to start building their ZTA frameworks early in the
+      process. This hands-on approach allows for a more authentic representation of what Zero Trust will look like
+      within the organization and facilitates incremental implementation across functional areas</span><span
+      class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://learn.microsoft.com/en-us/security/zero-trust/adopt/rapidly-modernize-security-posture&amp;sa=D&amp;source=editors&amp;ust=1733983630249426&amp;usg=AOvVaw161o_aBCz6ix_cK24oLLJy">[14][15]</a></span><span
+      class="c2">.</span></p>
+  <p class="c24 c25"><span class="c2"></span></p>
+  <p class="c25 c36"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">7.3 </span><span class="c7 c22">Addressing Challenges</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c62 c89"><span class="c8">Several challenges may arise during ZTA adoption, including concerns about oper-
+      ational impact, resource limitations, and a lack of understanding of required skills and training</span><span
+      class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ExecutiveSummary.html&amp;sa=D&amp;source=editors&amp;ust=1733983630250223&amp;usg=AOvVaw2T0g2H405oqvDQYcYbcUpn">[4]</a></span><span
+      class="c8">. To mitigate these challenges, organizations should leverage ex- isting investments, prioritize
+      critical elements of their digital estate, and ensure that foundational pieces like asset inventory and user role
+      management are adequately addressed</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/index.html&amp;sa=D&amp;source=editors&amp;ust=1733983630250531&amp;usg=AOvVaw3C4WjvIRZZmMDtrCdNOc9T">[4][16]</a></span><span
+      class="c2">.</span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c109"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c16">8.</span><span class="c16 c22">Use Cases</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c71"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 687.03px; height: 386.67px;"><img
+        alt="" src="images/image5.png"
+        style="width: 687.03px; height: 386.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c71 c90"><span class="c31">Source: </span><span class="c32 c31"><a class="c17"
+        href="https://www.google.com/url?q=https://www.aztechit.co.uk/blog/zero-trust-vs-traditional-perimeter-security&amp;sa=D&amp;source=editors&amp;ust=1733983630251972&amp;usg=AOvVaw1hfZ98NXsAxCi2y4tmilAI">Zero
+        Trust vs Traditional Perimeter Security: What&rsquo;s the Difference?</a></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c103"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">8.1 </span><span class="c7 c22">Testing Scenarios</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c170"><span class="c26 c22">Periodic testing of Zero Trust Architecture (ZTA) is essential to ensure its
+      effective-ness across various use case scenarios. These scenarios include both on-premises and cloud-based
+      resources, different endpoint locations (on-premises vs. internet),</span></p>
+  <p class="c20"><span class="c14 c9"></span></p>
+  <p class="c56"><span class="c26 c22">and varying authorization statuses of requesting subjects. Testing should also
+      en-compass both authorized and unauthorized service-to-service requests. Organiza-tions should aim to develop a
+      comprehensive suite of tests that reflects how users typically access resources, validating the ZTA both before
+      and after deployment</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://www.fortinet.com/resources/cyberglossary/what-is-the-zero-trust-network-security-model&amp;sa=D&amp;source=editors&amp;ust=1733983630253026&amp;usg=AOvVaw2sqO1FzF9XiYJeeZ1cOQDq">[7]</a></span><span
+      class="c26 c9 c27 c22">.</span></p>
+  <p class="c56 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c55 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">8.2 </span><span class="c7 c22">Dynamic Access Management</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c35"><span class="c26 c22">In the context of dynamic access decision-making, especially within Department of
+      Defense (DoD) organizations, rules must evolve to account for risk. Integrating Machine Learning (ML) and
+      Artificial Intelligence (AI) allows for automated rule management, enabling organizations to fully utilize rules
+      for dynamic access to applications and services</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://learn.microsoft.com/en-us/security/zero-trust/dod-zero-trust-strategy-user&amp;sa=D&amp;source=editors&amp;ust=1733983630253893&amp;usg=AOvVaw3zXI73g6T7bYmVSAkHIDzQ">[17]</a></span><span
+      class="c26 c22">. This approach not only enhances security but also streamlines the process of granting access
+      based on real-time evaluations.</span></p>
+  <p class="c35 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c35"><span class="c7">8.3 </span><a id="id.3znysh7"></a><span class="c7 c22">Phased Implementation</span>
+  </p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c47"><span class="c8">Organizations are encouraged to adopt a phased approach to deploying Zero Trust
+      capabilities. By prioritizing specific user groups and applications that reflect core business functions,
+      organizations can manage the change effectively, minimizing disruption during the rollout of new
+      technologies</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://expertinsights.com/insights/the-top-zero-trust-security-solutions/&amp;sa=D&amp;source=editors&amp;ust=1733983630254734&amp;usg=AOvVaw2s3gbDYdqWKDxStCHt5WFu">[18]</a></span><span
+      class="c2">. This strategy allows for better resource allocation and management while addressing potential
+      security challenges incrementally.</span></p>
+  <p class="c47 c25"><span class="c2"></span></p>
+  <p class="c69 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">8.4 </span><span class="c7 c22">Secure Remote Access</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c100 c162"><span class="c8">With the growing need for remote work, ZTA facilitates frictionless access to
+      multi-cloud environments and applications through solutions like remote-access</span></p>
+  <p class="c20"><span class="c14 c9"></span></p>
+  <p class="c73"><span class="c8">proxies and Single Sign-On (SSO). This enables secure connections for employees and
+      contractors while maintaining stringent access controls for non-compliant de- vices</span><span class="c34 c30"><a
+        class="c17"
+        href="https://www.google.com/url?q=https://www.cisco.com/c/en/us/solutions/collateral/enterprise/design-zone-security/zt-ag.html&amp;sa=D&amp;source=editors&amp;ust=1733983630255820&amp;usg=AOvVaw0AgI0J2ZwWkl7oHIELvm1W">[19]</a></span><span
+      class="c2">. A Zero Trust framework enhances overall network and cloud security, mit- igating various attack
+      vectors by ensuring that only authorized users and compliant devices can connect.</span></p>
+  <p class="c73 c25"><span class="c2"></span></p>
+  <p class="c36 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">8.5 </span><span class="c7 c22">Risk Assessment and Policy Formulation</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c62"><span class="c8">Before migrating to ZTA, organizations must assess and rank their business processes
+      and associated risks. This evaluation informs which services or processes should be prioritized for initial
+      migration, allowing for a smoother transition and mini- mizing potential disruptions</span><span
+      class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.strongdm.com/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630256612&amp;usg=AOvVaw0_MQyPzRohgFjGji0DPRlg">[12]</a></span><span
+      class="c2">. Policies should be tailored based on the significance of each process and the impacted user groups,
+      ensuring that critical operations are secured first.</span></p>
+  <p class="c62 c25"><span class="c2"></span></p>
+  <p class="c69 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">8.6 </span><span class="c7 c22">Security Posture Modernization</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c78 c68"><span class="c2">Implementing a Zero Trust model enables organizations to refine their security
+      pos-ture by minimizing the blast radius of potential breaches and enhancing overall visibility across their
+      networks. Techniques such as least-privilege access, just-in-time (JIT) access, and risk-based adaptive policies
+      are fundamental to </span></p>
+  <p class="c78 c25 c68"><span class="c2"></span></p>
+  <p class="c78 c68"><span class="c8">protecting sensitive data and ensuring compliance across various operational
+      landscapes</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-za/security/business/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630257576&amp;usg=AOvVaw0XoBBP62tttWqgKIl0Ick_">[20][21]</a></span><span
+      class="c2">.</span></p>
+  <p class="c25 c68 c78"><span class="c2"></span></p>
+  <p class="c0"><span class="c7">8.7 </span><span class="c7 c22">Supporting a Hybrid Workforce</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c39 c92"><span class="c8">The Zero Trust approach is particularly effective for organizations with hybrid
+      work environments. By establishing adaptable security policies that protect devices and identities, companies can
+      maintain productivity while safeguarding critical assets</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-gb/security/business/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630258278&amp;usg=AOvVaw2PUvVj63ZPAEzYbn4h20JZ">[22]</a></span><span
+      class="c8">. This adaptability is crucial as work environments evolve and remote access becomes increasingly
+      commonplace.</span></p>
+  <p class="c39 c25 c92"><span class="c2"></span></p>
+  <p class="c0"><span class="c16">9.</span><span class="c16 c22">Benefits of ZTA</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c39 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">9.1 </span><span class="c7 c22">Enhanced Security</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c140 c102"><span class="c8">Zero Trust architecture significantly enhances an organization&#39;s security
+      posture by reducing the risk of data breaches by up to 50% through improved authentication, network, and endpoint
+      security protocols. Enhanced visibility into the network allows organizations to better protect themselves from
+      threats, and network segmentation helps contain financial losses in the event of a breach</span><span
+      class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/blog/2022/01/12/microsoft-zero-trust-solutions-deliver-92-percent-return-on-investment-says-new-forrester-study/&amp;sa=D&amp;source=editors&amp;ust=1733983630259825&amp;usg=AOvVaw21zL78xlimkQh2TR9iCKrZ">[23]</a></span><span
+      class="c8">. This architecture operates under the principle that no entity, whether inside or outside the network,
+      is automat- ically trusted, which is crucial in mitigating risks associated with sophisticated cyber
+      threats</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://expertinsights.com/insights/the-top-zero-trust-security-solutions/&amp;sa=D&amp;source=editors&amp;ust=1733983630260190&amp;usg=AOvVaw1HrT6TvX8ajp3IXXeOvNot">[18]</a></span><span
+      class="c2">.</span></p>
+  <p class="c0 c25"><span class="c2"></span></p>
+  <p class="c0 c25"><span class="c2"></span></p>
+  <p class="c0 c25"><span class="c7 c9 c27 c22"></span></p>
+  <p class="c0 c25"><span class="c7 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c7">9.2 </span><span class="c7 c22">Cost Efficiency</span></p>
+  <p class="c50"><span class="c8">Implementing Zero Trust leads to substantial cost savings by transforming an
+      orga-nization&#39;s entire security strategy. By eliminating legacy systems and streamlining processes,
+      organizations can uncover significant savings across their cybersecurity operations</span><span class="c34 c30"><a
+        class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/blog/2022/01/12/microsoft-zero-trust-solutions-deliver-92-percent-return-on-investment-says-new-forrester-study/&amp;sa=D&amp;source=editors&amp;ust=1733983630261314&amp;usg=AOvVaw0xevo27v05tNPxF0HbfUkJ">[23]</a></span><span
+      class="c8">. Furthermore, the architecture allows security teams to focus on inci- dent response rather than
+      routine maintenance tasks, thereby improving operational efficiency and reducing overall security
+      costs</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/business/security-101/what-is-zero-trust-architecture&amp;sa=D&amp;source=editors&amp;ust=1733983630261726&amp;usg=AOvVaw0OS5WlF_CpIOopj_8OFDjE">[24]</a></span><span
+      class="c2">.</span></p>
+  <p class="c50 c25"><span class="c2"></span></p>
+  <p class="c69 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">9.3 </span><span class="c7 c22">Improved Employee Experience</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c117 c140"><span class="c8">Zero Trust architecture enhances the employee experience by simplifying access
+      to resources. Features such as Single Sign-On (SSO) and biometric authentication reduce the complexity of managing
+      multiple passwords. Additionally, supporting a</span></p>
+  <p class="c20"><span class="c14 c9"></span></p>
+  <p class="c161"><span class="c8">bring-your-own-device (BYOD) model provides employees with greater flexibility and
+      freedom while ensuring security compliance</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/business/security-101/what-is-zero-trust-architecture&amp;sa=D&amp;source=editors&amp;ust=1733983630263036&amp;usg=AOvVaw2xCQkbR1OuBj9yRcP7HekB">[24]</a></span><span
+      class="c2">.</span></p>
+  <p class="c21"><span class="c14 c9"></span></p>
+  <p class="c0 c25"><span class="c7 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c7">9.4 </span><span class="c7 c22">Robust Compliance and Governance</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c100 c113"><span class="c8">The architecture supports the development of a comprehensive governance and
+      compliance framework, ensuring alignment with prevailing laws and regulations. It also automates controls for
+      addressing gaps in security standards, which is increas- ingly important in today&#39;s regulatory
+      environment</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://pubs.opengroup.org/security/zero-trust-principles/&amp;sa=D&amp;source=editors&amp;ust=1733983630264043&amp;usg=AOvVaw27JqVXGHzAnYoW_Dax4fYa">[1]</a></span><span
+      class="c2">. By shifting security </span></p>
+  <p class="c100 c113"><span class="c8">measures closer to data assets and implementing near real-time breach responses,
+      organiza- tions can effectively minimize the fallout from security incidents</span><span class="c34 c30"><a
+        class="c17"
+        href="https://www.google.com/url?q=https://pubs.opengroup.org/security/zero-trust-principles/&amp;sa=D&amp;source=editors&amp;ust=1733983630264478&amp;usg=AOvVaw1V4WomANb0Wj9-gVAwxqB0">[1]</a></span><span
+      class="c2">.</span></p>
+  <p class="c100 c113 c25"><span class="c2"></span></p>
+  <p class="c69 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">9.5 </span><span class="c7 c22">Continuous Monitoring and Adaptability</span></p>
+  <p class="c25 c148"><span class="c14 c9"></span></p>
+  <p class="c60"><span class="c26 c22">A key advantage of Zero Trust is the capability for continuous monitoring and
+      logging of network activities. This real-time oversight enables organizations to detect sus- picious behavior
+      early and respond swiftly to potential threats</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://savvycomsoftware.com/blog/zero-trust-implementation/&amp;sa=D&amp;source=editors&amp;ust=1733983630265388&amp;usg=AOvVaw0cWRPYIplzgOviKOQja9nX">[25]</a></span><span
+      class="c26 c22">. As cyber</span><span class="c26">&nbsp;</span><a id="id.2et92p0"></a><span class="c8">threats
+      evolve, the architecture&#39;s adaptability helps organizations remain resilient against emerging risks, making it
+      essential for maintaining a robust security posture</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/respond-to-trending-threats-and-adopt-zero-trust-with-exposure/ba-p/4130133&amp;sa=D&amp;source=editors&amp;ust=1733983630265900&amp;usg=AOvVaw1AAPeUD0LRpWe3Fmq0EE7_">[26]</a></span><span
+      class="c2">.</span></p>
+  <p class="c60 c25"><span class="c2"></span></p>
+  <p class="c25 c124"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">9.6 </span><span class="c7 c22">Micro-Segmentation</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c62 c59"><span class="c8">Zero Trust employs micro-segmentation, which divides networks into smaller,
+      isolated segments with specific security policies for each. This approach prevents lateral movement by attackers
+      within the network, limiting their access to critical systems and sensitive data if a breach occurs</span><span
+      class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://savvycomsoftware.com/blog/zero-trust-implementation/&amp;sa=D&amp;source=editors&amp;ust=1733983630266823&amp;usg=AOvVaw0GpqNWukNUcatGATBby6wE">[25]</a></span><span
+      class="c8">. By establishing distinct boundaries, organi- zations can better manage and mitigate potential damage
+      from security incidents</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630267187&amp;usg=AOvVaw1Mj7XATAIJYhjBgyEFlNoe">[14]</a></span><span
+      class="c2">.</span></p>
+  <p class="c0 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c16">10.</span><span class="c16 c22">Criticisms and Limitations</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c67"><span class="c14 c9"></span></p>
+  <p class="c136"><span class="c26 c9 c27 c22">Despite the growing interest in Zero Trust Architecture (ZTA), several
+      criticisms and limitations have been identified that may hinder its adoption and implementation.</span></p>
+  <p class="c18"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c25 c150"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">10.1 </span><span class="c7 c22">Technical Challenges</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c113 c157"><span class="c8">One significant challenge lies in the integration of various technologies that
+      differ in maturity levels. Organizations often struggle to assess capabilities and identify technology gaps, which
+      complicates the construction of a complete ZTA</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ExecutiveSummary.html&amp;sa=D&amp;source=editors&amp;ust=1733983630268817&amp;usg=AOvVaw11mrr1uFILH-dHUfJduaQu">[4]</a></span><span
+      class="c2">.</span></p>
+  <p class="c20"><span class="c14 c9"></span></p>
+  <p class="c100 c113"><span class="c8">Moreover, the lack of visibility into organizational communications and usage
+      patterns creates a limited understanding of the transactions that occur between various subjects, assets,
+      applications, and services</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ExecutiveSummary.html&amp;sa=D&amp;source=editors&amp;ust=1733983630269352&amp;usg=AOvVaw2A1GhJ8-3WiM7B5FJ9oav2">[4]</a></span><span
+      class="c8">. This obscurity can lead to false assumptions about device health and exposure to risks</span><span
+      class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ExecutiveSummary.html&amp;sa=D&amp;source=editors&amp;ust=1733983630269659&amp;usg=AOvVaw1_ZkmTzbjm6_TkyNDizCBM">[4]</a></span><span
+      class="c2">.</span></p>
+  <p class="c100 c113 c25"><span class="c2"></span></p>
+  <p class="c25 c160"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c7">10.2 </span><span class="c7 c22">Financial Constraints</span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c154"><span class="c26 c22">Financial barriers also pose a limitation for many organizations. The costs
+      associated with replacing legacy technologies and modernizing security infrastructures can be prohibitive.
+      Organizations typically cannot afford to overhaul their security systems all at once, which delays the adoption of
+      ZTA</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ProjectOverview.html&amp;sa=D&amp;source=editors&amp;ust=1733983630270523&amp;usg=AOvVaw1kWLg9OgTVG3ApenKxrWii">[5]</a></span><span
+      class="c26 c22">. Additionally, many organizations report difficulties in applying and enforcing consistent
+      security policies due to the high costs of maintaining disjointed security solutions, which can also lead to
+      performance bottlenecks and poor user experience</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://www.fortinet.com/blog/ciso-collective/zero-trust-implementation-challenges-to-overcome&amp;sa=D&amp;source=editors&amp;ust=1733983630270890&amp;usg=AOvVaw2BPLWOPp5wsQ6e5YmkXBQR">[27]</a></span><span
+      class="c26 c9 c27 c22">.</span></p>
+  <p class="c25 c143"><span class="c14 c9"></span></p>
+  <p class="c0 c25"><span class="c7 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c7">10.3 </span><span class="c7 c22">User Resistance</span></p>
+  <p class="c25 c163"><span class="c14 c9"></span></p>
+  <p class="c19"><span class="c8">User pushback is another critical issue associated with ZTA. The increased security
+      measures that come with a zero-trust approach may raise friction, which can nega- tively impact user experience.
+      Security teams often find themselves in a balancing act between enforcing stringent access controls and
+      maintaining user productivity</span><span class="c30 c34"><a class="c17"
+        href="https://www.google.com/url?q=https://www.techtarget.com/searchsecurity/feature/How-to-implement-zero-trust-security-from-people-who-did-it&amp;sa=D&amp;source=editors&amp;ust=1733983630271875&amp;usg=AOvVaw18jlRWrv_oxSHLqfNtEeF9">[5][28]</a></span><span
+      class="c8">. In many cases, organizations have opted to reserve strict controls for the most sensitive areas of
+      their networks to minimize user frustration, potentially undermining the overarching goals of a zero-trust
+      approach</span><span class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.techtarget.com/searchsecurity/feature/How-to-implement-zero-trust-security-from-people-who-did-it&amp;sa=D&amp;source=editors&amp;ust=1733983630272267&amp;usg=AOvVaw0fHbCaMcLP2vMhLdJ3omFM">[28]</a></span><span
+      class="c8">.</span></p>
+  <p class="c19 c25"><span class="c2"></span></p>
+  <p class="c19"><span class="c7">10.4 </span><a id="id.tyjcwt"></a><span class="c7 c22">Complexity and Adoption</span>
+  </p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c10 c110"><span class="c26 c22">The complexity of implementing ZTA can be daunting for organizations, many
+      of which are still in the early stages of establishing the necessary controls</span><span class="c34 c26"><a
+        class="c17"
+        href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ProjectOverview.html&amp;sa=D&amp;source=editors&amp;ust=1733983630273186&amp;usg=AOvVaw1UxNcpGbK6oASXcqxtN2tL">[5]</a></span><span
+      class="c26 c22">. Building a comprehensive understanding of the existing IT infrastructure is essential for a
+      successful ZTA adoption plan, yet many organizations find this initial evaluation challenging</span><span
+      class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630273580&amp;usg=AOvVaw01L8tfSsBSJZgMuM55ORJr">[14]</a></span><span
+      class="c26 c22">. Additionally, the need for interoperability between isolated solutions has become increasingly
+      critical, as organizations may find themselves relying on multiple vendors that do not natively communicate with
+      each other</span><span class="c34 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://www.fortinet.com/blog/ciso-collective/zero-trust-implementation-challenges-to-overcome&amp;sa=D&amp;source=editors&amp;ust=1733983630273949&amp;usg=AOvVaw0Wz0vDlPA2N37uWf5g_02t">[27]</a></span><span
+      class="c26 c9 c27 c22">.</span></p>
+  <p class="c0 c25"><span class="c16 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c16">11.Evolving Threat Landscape</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c3"><span class="c14 c9"></span></p>
+  <p class="c39 c113 c10"><span class="c8">Finally, the evolving nature of cyber threats presents ongoing challenges for
+      ZTA. As organizations adapt their security architectures, new vulnerabilities and gaps may arise, which can
+      complicate the effectiveness of a zero-trust model. Respondents to various surveys have noted that as they
+      integrate more security solutions, they sometimes inadvertently create additional exploitable gaps</span><span
+      class="c34 c30"><a class="c17"
+        href="https://www.google.com/url?q=https://www.fortinet.com/blog/ciso-collective/zero-trust-implementation-challenges-to-overcome&amp;sa=D&amp;source=editors&amp;ust=1733983630275003&amp;usg=AOvVaw2k4ztCw20qPlRkslFla_6g">[27]</a></span><span
+      class="c2">.</span></p>
+  <p class="c25 c135"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c42 c80">12.</span><span class="c42 c80 c22">Future of Zero Trust</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c51 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c50"><span class="c8">The future trajectory of Zero Trust Architecture (ZTA) is increasingly central to
+      organizational security strategies. This evolution is propelled by the persistent need for trust verification and
+      the recognition that traditional security perimeters are obsolete. The exponential growth in cloud computing,
+      mobile technology, and IoT device adoption has significantly accelerated the transition toward Zero Trust
+      frameworks</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://savvycomsoftware.com/blog/zero-trust-implementation/&amp;sa=D&amp;source=editors&amp;ust=1733983630275992&amp;usg=AOvVaw2DTZfxMjKTXq-XwyIrE7-s">[19][25]</a></span><span
+      class="c2">.</span></p>
+  <p class="c0 c25"><span class="c38 c9 c27 c22"></span></p>
+  <p class="c0"><span class="c38">12.1 </span><span class="c22 c38">Trends Shaping Zero Trust</span></p>
+  <p class="c0 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c0 c146"><span class="c42 c139">12.1.1 </span><span class="c42 c139 c22">Increased Adoption in
+      Enterprises</span></p>
+  <p class="c25 c63 c116"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c39 c63"><span class="c8">Enterprise adoption of Zero Trust strategies has seen remarkable growth, with
+      security professionals increasingly advocating for this approach. While organizations are actively planning ZTA
+      implementations to enhance data protection, they face significant challenges in mapping and understanding their
+      internal network communications effectively</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.techtarget.com/searchsecurity/feature/How-to-implement-zero-trust-security-from-people-who-did-it&amp;sa=D&amp;source=editors&amp;ust=1733983630277107&amp;usg=AOvVaw1lkiYsk-mtX1-j1B1yVq8P">[28]</a></span><span
+      class="c2">.</span></p>
+  <p class="c103 c25"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c0 c146"><span class="c42 c139">12.1.2 </span><span class="c42 c139 c22">Integration of Emerging
+      Technologies</span></p>
+  <p class="c116 c25 c63"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c39 c169 c63"><span class="c8">The evolution of Zero Trust is intrinsically linked to emerging technology
+      integration. Organizations must maintain agility and adaptability in response to evolving threats and
+      transformative events like the COVID-19 pandemic, which has fundamentally reshaped workplace dynamics and
+      heightened the demand for robust security frameworks</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/blog/2021/07/28/zero-trust-adoption-report-how-does-your-organization-compare/&amp;sa=D&amp;source=editors&amp;ust=1733983630278041&amp;usg=AOvVaw1lbCdY3zXl9OYCHjsKm7Yi">[1][29]</a></span><span
+      class="c2">.</span></p>
+  <p class="c25 c63 c82"><span class="c26 c9 c27 c22"></span></p>
+  <p class="c63 c70"><span class="c26 c22">A critical consideration is the integration of existing technological
+      infrastructure, where interoperability challenges often emerge. Success in implementing Zero Trust models heavily
+      depends on achieving seamless interaction between diverse securit</span><a id="id.3dy6vkm"></a><span
+      class="c22 c26">y</span><span class="c31">&nbsp;</span><span class="c8">solutions and systems</span><span
+      class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://sechard.com/blog/challenges-faced-by-organizations-while-migrating-to-a-zero-trust-architecture/&amp;sa=D&amp;source=editors&amp;ust=1733983630278753&amp;usg=AOvVaw01qCEa4c501gtBGGft-GoO">[13]</a></span><span
+      class="c2">.</span></p>
+  <p class="c138 c25"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c38">12.2 </span><span class="c38 c22">Challenges Ahead</span></p>
+  <p class="c25 c97"><span class="c14 c9"></span></p>
+  <p class="c59 c62"><span class="c8">The path to comprehensive Zero Trust implementation presents significant
+      obstacles. Organizations struggle with vendor proliferation and the complexities of managing heterogeneous
+      technology environments</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.fortinet.com/blog/ciso-collective/zero-trust-implementation-challenges-to-overcome&amp;sa=D&amp;source=editors&amp;ust=1733983630279547&amp;usg=AOvVaw2XFToTj6BXPaIQaFPTnQbP">[27]</a></span><span
+      class="c8">. Even organizations that initially believed they had successfully implemented Zero Trust are
+      reassessing their approaches, highlighting the crucial importance of vendor consolidation and solution
+      compatibility</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.fortinet.com/blog/ciso-collective/zero-trust-implementation-challenges-to-overcome&amp;sa=D&amp;source=editors&amp;ust=1733983630279910&amp;usg=AOvVaw3EQPxJI-SkpByM5wY-hQDE">[27]</a></span><span
+      class="c2">.</span></p>
+  <p class="c25 c164"><span class="c14 c9"></span></p>
+  <p class="c95"><span class="c26 c22">Additionally, the success of Zero Trust implementations heavily depends on
+      achieving organizational cultural transformation. Leadership must effectively communicate the rationale behind
+      this transition and establish realistic implementation expectations to ensure widespread organizational adoption
+      and adaptation</span><span class="c32 c26"><a class="c17"
+        href="https://www.google.com/url?q=https://pubs.opengroup.org/security/zero-trust-principles/&amp;sa=D&amp;source=editors&amp;ust=1733983630280427&amp;usg=AOvVaw0fxdxpQRRjnKkRO34lfuYV">[1]</a></span><span
+      class="c26 c9 c27 c22">.</span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c57"><span class="c14 c9"></span></p>
+  <p class="c0"><span class="c16">13.</span><span class="c16 c22">References</span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+  <p class="c15"><span class="c14 c9"></span></p>
+  <p class="c25 c159"><span class="c14 c9"></span></p>
+  <ol class="c13 lst-kix_list_2-0 start" start="1">
+    <li class="c52"><span class="c8">The Open Group, &quot;Zero Trust Core Principles,&quot; The Open Group, 2023.
+        [Online]. Available:</span><span class="c30 c120">&nbsp;</span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://pubs.opengroup.org/security/zero-trust-principles/&amp;sa=D&amp;source=editors&amp;ust=1733983630281461&amp;usg=AOvVaw30qjRgE1mFrq_t3mkamyGp">https://pubs.opengroup.org/security/zero-trust-principles/</a></span>
+    </li>
+  </ol>
+  <p class="c49 c25"><span class="c2"></span></p>
+  <ol class="c13 lst-kix_list_2-0" start="2">
+    <li class="c94 c59"><span class="c8">Microsoft Security Team, &quot;A clearer lens on Zero Trust security strategy:
+        Part 1,&quot; Microsoft Security Blog, Apr. 14, 2022. [Online]. Available: </span><span class="c6"><a
+          class="c17"
+          href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/blog/2022/04/14/a-clearer-lens-on-zero-trust-security-strategy-part-1/&amp;sa=D&amp;source=editors&amp;ust=1733983630282000&amp;usg=AOvVaw0Hl-ZdKaOLp2SkcXiTqe2X">https://www.microsoft.com/en-us/security/blog/2022/04/14/a-clearer-lens-on-zero-trus</a></span><span
+        class="c6">&nbsp;</span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/blog/2022/04/14/a-clearer-lens-on-zero-trust-security-strategy-part-1/&amp;sa=D&amp;source=editors&amp;ust=1733983630282345&amp;usg=AOvVaw08kK-Y5CkHd5N7inLIYwjp">t-security-strategy-part-1/</a></span>
+    </li>
+  </ol>
+  <p class="c76 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_2-0" start="3">
+    <li class="c0 c152 li-bullet-1"><span class="c2">S. Rose, O. Borchert, S. Mitchell, and S. Connelly, &quot;Zero
+        Trust Architecture,&quot;</span></li>
+  </ol>
+  <p class="c131 c25"><span class="c2"></span></p>
+  <p class="c129"><span class="c8">National Institute of Standards and Technology, NIST Special Publication 800-207,
+      Aug. 2020. [Online]. Available: </span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.nist.gov/publications/zero-trust-architecture&amp;sa=D&amp;source=editors&amp;ust=1733983630283053&amp;usg=AOvVaw30BEkFjRMorzeN1Qrz-fWB">https://www.nist.gov/publications/zero-trust-architecture</a></span>
+  </p>
+  <p class="c43 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_2-0" start="4">
+    <li class="c122"><span class="c26 c22">NIST Zero Trust Team, &quot;Implementing a Zero Trust Architecture -
+        Executive Summary,&quot; National Institute of Standards and Technology, 2023. [Online]. Available: </span><span
+        class="c32 c26"><a class="c17"
+          href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ExecutiveSummary.html&amp;sa=D&amp;source=editors&amp;ust=1733983630283582&amp;usg=AOvVaw0TQn6cRW-BpVcM3T71Vnm6">https://pages.nist.gov/zero-trust-architecture/VolumeA/ExecutiveSummary.html</a></span>
+    </li>
+  </ol>
+  <p class="c25 c99"><span class="c32 c26 c9"></span></p>
+  <ol class="c13 lst-kix_list_2-0" start="5">
+    <li class="c72"><span class="c8">NIST Zero Trust Team, &quot;Zero Trust Architecture Project Overview,&quot;
+        National Institute of Standards and Technology, 2023. [Online]. Available: </span><span class="c6"><a
+          class="c17"
+          href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeA/ProjectOverview.html&amp;sa=D&amp;source=editors&amp;ust=1733983630284105&amp;usg=AOvVaw2EJDOgtPq31a6MSQtrmBXh">https://pages.nist.gov/zero-trust-architecture/VolumeA/ProjectOverview.html</a></span>
+    </li>
+  </ol>
+  <p class="c43 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_2-0" start="6">
+    <li class="c169 c172"><span class="c26 c22">M. K. Pratt, &quot;What is zero trust? A model for more effective
+        security,&quot; CSO Online, Jan. 19, 2023. [Online]. Available: </span><span class="c32 c26"><a class="c17"
+          href="https://www.google.com/url?q=https://www.csoonline.com/article/564201/what-is-zero-trust-a-model-for-more-effective-security.html&amp;sa=D&amp;source=editors&amp;ust=1733983630284649&amp;usg=AOvVaw327u6mM6wQz4cWSG82ZKDZ">https://www.csoonline.com/article/564201/what-is-zero-trust-a-model-for-more-effecti</a></span><a
+        id="id.1t3h5sf"></a><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.csoonline.com/article/564201/what-is-zero-trust-a-model-for-more-effective-security.html&amp;sa=D&amp;source=editors&amp;ust=1733983630284966&amp;usg=AOvVaw1LZgaa3qGacuRiUtXe8Col">ve-security.html</a></span>
+    </li>
+  </ol>
+  <p class="c25 c151"><span class="c14 c9"></span></p>
+  <ol class="c13 lst-kix_list_3-0 start" start="7">
+    <li class="c46"><span class="c8">Fortinet Security Team, &quot;What Is the Zero Trust Security Model? How Does it
+        Work?,&quot; Fortinet, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.fortinet.com/resources/cyberglossary/what-is-the-zero-trust-network-security-model&amp;sa=D&amp;source=editors&amp;ust=1733983630285613&amp;usg=AOvVaw1ZkWHTh-yzY7q8HRcyRo7G">https://www.fortinet.com/resources/cyberglossary/what-is-the-zero-trust-network-secu</a></span><span
+        class="c6">&nbsp;</span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.fortinet.com/resources/cyberglossary/what-is-the-zero-trust-network-security-model&amp;sa=D&amp;source=editors&amp;ust=1733983630286001&amp;usg=AOvVaw0WHQOn6a3arWUPyWclQucM">rity-model</a></span>
+    </li>
+  </ol>
+  <p class="c76 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_3-0" start="8">
+    <li class="c58"><span class="c26 c22">NIST Zero Trust Team, &quot;Zero Trust Journey Takeaways,&quot; National
+        Institute of Standards and Technology, 2023. [Online]. Available: </span><span class="c32 c26"><a class="c17"
+          href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/VolumeB/ZeroTrustTakeaways.html&amp;sa=D&amp;source=editors&amp;ust=1733983630286465&amp;usg=AOvVaw0pqMKjqnWjA8oaJbS6dP-M">https://pages.nist.gov/zero-trust-architecture/VolumeB/ZeroTrustTakeaways.html</a></span>
+    </li>
+  </ol>
+  <p class="c99 c25"><span class="c32 c26 c9"></span></p>
+  <ol class="c13 lst-kix_list_3-0" start="9">
+    <li class="c37"><span class="c8">IBM Security Team, &quot;The Evolution of Zero Trust and the Frameworks that Guide
+        It,&quot; IBM Think Insights, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.ibm.com/think/insights/the-evolution-of-zero-trust-and-the-frameworks-that-guide-it&amp;sa=D&amp;source=editors&amp;ust=1733983630286919&amp;usg=AOvVaw1zC1QzJjSyoTV_xfxbAxsv">https://www.ibm.com/think/insights/the-evolution-of-zero-trust-and-the-frameworks-th</a></span><span
+        class="c6">&nbsp;</span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.ibm.com/think/insights/the-evolution-of-zero-trust-and-the-frameworks-that-guide-it&amp;sa=D&amp;source=editors&amp;ust=1733983630287191&amp;usg=AOvVaw2szHB8UIDTgC16bFVhFPTf">at-guide-it</a></span>
+    </li>
+  </ol>
+  <p class="c76 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_3-0" start="10">
+    <li class="c94 c169"><span class="c8">Zscaler Security Team, &quot;7 Elements Of A Highly Successful Zero Trust
+        Architecture,&quot; Forbes, Apr. 15, 2024. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.forbes.com/sites/zscaler/2024/04/15/7-elements-of-a-highly-successful-zero-trust-architecture/&amp;sa=D&amp;source=editors&amp;ust=1733983630287740&amp;usg=AOvVaw1M5SETReST60Jm3no_loSl">https://www.forbes.com/sites/zscaler/2024/04/15/7-elements-of-a-highly-successful-z</a></span><span
+        class="c6">&nbsp;</span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.forbes.com/sites/zscaler/2024/04/15/7-elements-of-a-highly-successful-zero-trust-architecture/&amp;sa=D&amp;source=editors&amp;ust=1733983630288092&amp;usg=AOvVaw3gfCpY_4I2K5ZKNA_ZUhM_">ero-trust-architecture/</a></span>
+    </li>
+  </ol>
+  <p class="c76 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_3-0" start="11">
+    <li class="c98 c166"><span class="c8">1Password Security Team, &quot;The history, evolution, and controversies of
+        zero trust,&quot; 1Password Blog, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://blog.1password.com/history-of-zero-trust/&amp;sa=D&amp;source=editors&amp;ust=1733983630288463&amp;usg=AOvVaw33mo_W-ktJ7R5PUlEb0Ael">https://blog.1password.com/history-of-zero-trust/</a></span>
+    </li>
+  </ol>
+  <p class="c25 c43"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_3-0" start="12">
+    <li class="c87"><span class="c26 c22">StrongDM Security Team, &quot;What Is Zero Trust Architecture? Zero Trust
+        Security Guide,&quot; StrongDM, 2023. [Online]. Available:</span><span class="c26 c120">&nbsp;</span><span
+        class="c32 c26"><a class="c17"
+          href="https://www.google.com/url?q=https://www.strongdm.com/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630288831&amp;usg=AOvVaw0QDIwH1X0U2gE70QQzxp-_">https://www.strongdm.com/zero-trust</a></span>
+    </li>
+  </ol>
+  <p class="c69 c25"><span class="c26 c9 c22 c27"></span></p>
+  <ol class="c13 lst-kix_list_3-0" start="13">
+    <li class="c94"><span class="c8">Sechard Security Team, &quot;Challenges Faced by Organizations While Migrating To a
+        Zero Trust Architecture,&quot; Sechard Blog, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://sechard.com/blog/challenges-faced-by-organizations-while-migrating-to-a-zero-trust-architecture/&amp;sa=D&amp;source=editors&amp;ust=1733983630289212&amp;usg=AOvVaw0qxujgjGn-tP9RwHsDHw-2">https://sechard.com/blog/challenges-faced-by-organizations-while-migrating-to-a-zero</a></span><span
+        class="c6">&nbsp;</span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://sechard.com/blog/challenges-faced-by-organizations-while-migrating-to-a-zero-trust-architecture/&amp;sa=D&amp;source=editors&amp;ust=1733983630289534&amp;usg=AOvVaw0kGNUiAPLmi_1fE3QFkXlV">-trust-architecture/</a></span>
+    </li>
+  </ol>
+  <p class="c25 c76"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_3-0" start="14">
+    <li class="c37"><span class="c8">AWS Security Team, &quot;Best practices for achieving success with Zero
+        Trust,&quot; AWS Prescriptive Guidance, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630289981&amp;usg=AOvVaw3c7gDbEsyQ8X50Qb7RAbj3">https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-archite</a></span><span
+        class="c6">&nbsp;</span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-zero-trust-architecture/best-practices.html&amp;sa=D&amp;source=editors&amp;ust=1733983630290192&amp;usg=AOvVaw3a0pIIgO4PK7g5__rVNoze">cture/best-practices.html</a></span>
+    </li>
+  </ol>
+  <p class="c76 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_3-0" start="15">
+    <li class="c83 c106"><span class="c2">Microsoft Security Team, &quot;Rapidly modernize your security posture for
+        Zero Trust,&quot; Microsoft Learn, 2023. [Online]. Available:</span></li>
+  </ol><a id="id.4d34og8"></a>
+  <p class="c106 c108"><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://learn.microsoft.com/en-us/security/zero-trust/adopt/rapidly-modernize-security-posture&amp;sa=D&amp;source=editors&amp;ust=1733983630290657&amp;usg=AOvVaw3fatKrMmzYz0NHoWLnqA_d">https://learn.microsoft.com/en-us/security/zero-trust/adopt/rapidly-modernize-security</a></span><span
+      class="c6">&nbsp;</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://learn.microsoft.com/en-us/security/zero-trust/adopt/rapidly-modernize-security-posture&amp;sa=D&amp;source=editors&amp;ust=1733983630290841&amp;usg=AOvVaw06gVUBALpBpHVyY32wxW6j">-posture</a></span>
+  </p>
+  <p class="c49 c25"><span class="c14 c9"></span></p>
+  <ol class="c13 lst-kix_list_4-0 start" start="16">
+    <li class="c59 c98"><span class="c8">NIST Zero Trust Team, &quot;Implementing a Zero Trust Architecture: Full
+        Document,&quot; National Institute of Standards and Technology, 2023. [Online]. Available: </span><span
+        class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://pages.nist.gov/zero-trust-architecture/index.html&amp;sa=D&amp;source=editors&amp;ust=1733983630291274&amp;usg=AOvVaw3ZuvFQQlGi4cx_A6GnjymH">https://pages.nist.gov/zero-trust-architecture/index.html</a></span>
+    </li>
+  </ol>
+  <p class="c43 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_4-0" start="17">
+    <li class="c98 c89"><span class="c8">Microsoft Security Team, &quot;DoD Zero Trust Strategy for the user
+        pillar,&quot; Microsoft Learn, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://learn.microsoft.com/en-us/security/zero-trust/dod-zero-trust-strategy-user&amp;sa=D&amp;source=editors&amp;ust=1733983630291936&amp;usg=AOvVaw0ubzSyiZN0IdbKoC6FuRXu">https://learn.microsoft.com/en-us/security/zero-trust/dod-zero-trust-strategy-user</a></span>
+    </li>
+  </ol>
+  <p class="c43 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_4-0" start="18">
+    <li class="c98 c167"><span class="c8">Expert Insights Security Team, &quot;The Top 10 Zero Trust Security
+        Solutions,&quot; Expert Insights, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://expertinsights.com/insights/the-top-zero-trust-security-solutions/&amp;sa=D&amp;source=editors&amp;ust=1733983630292408&amp;usg=AOvVaw0qe1TnjfpP-snsiXEp1hDW">https://expertinsights.com/insights/the-top-zero-trust-security-solutions/</a></span>
+    </li>
+  </ol>
+  <p class="c43 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_4-0" start="19">
+    <li class="c142"><span class="c8">Cisco Security Team, &quot;Zero Trust Architecture Guide,&quot; Cisco, 2023.
+        [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.cisco.com/c/en/us/solutions/collateral/enterprise/design-zone-security/zt-ag.html&amp;sa=D&amp;source=editors&amp;ust=1733983630292811&amp;usg=AOvVaw1uRMDuuHGHh00062V0kNRU">https://www.cisco.com/c/en/us/solutions/collateral/enterprise/design-zone-security/zt-ag.html</a></span>
+    </li>
+    <li class="c98 c101"><span class="c8">Microsoft Security Team, &quot;Zero Trust Model - Modern Security
+        Architecture,&quot; Microsoft Security, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/business/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630293044&amp;usg=AOvVaw2hWIuGE-wxMNyOUM4_Ocui">https://www.microsoft.com/en-us/security/business/zero-trust</a></span>
+    </li>
+  </ol>
+  <p class="c43 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_4-0" start="21">
+    <li class="c94"><span class="c8">Microsoft Security Team, &quot;Microsoft Zero Trust solutions deliver 92 percent
+        return on investment,&quot; Microsoft Security Blog, Jan. 12, 2022. [Online]. Available: </span><span
+        class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/blog/2022/01/12/microsoft-zero-trust-solutions-deliver-92-percent-return-on-investment-says-new-forrester-study/&amp;sa=D&amp;source=editors&amp;ust=1733983630293409&amp;usg=AOvVaw0RQlytTmxA5NlBtUAi4I6U">https://www.microsoft.com/en-us/security/blog/2022/01/12/microsoft-zero-trust-solutio</a></span><span
+        class="c6">&nbsp;</span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/blog/2022/01/12/microsoft-zero-trust-solutions-deliver-92-percent-return-on-investment-says-new-forrester-study/&amp;sa=D&amp;source=editors&amp;ust=1733983630293657&amp;usg=AOvVaw0a4Dh8H4WHe5JLBcDuj4Mo">ns-deliver-92-percent-return-on-investment-says-new-forrester-study/</a></span>
+    </li>
+  </ol>
+  <p class="c76 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_4-0" start="22">
+    <li class="c0 c84 li-bullet-2"><span class="c2">Microsoft Security Team, &quot;What Is Zero Trust
+        Architecture?,&quot; Microsoft Security,</span></li>
+  </ol>
+  <p class="c25 c131"><span class="c2"></span></p>
+  <p class="c112"><span class="c8">2023. [Online]. Available: </span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/business/security-101/what-is-zero-trust-architecture&amp;sa=D&amp;source=editors&amp;ust=1733983630294061&amp;usg=AOvVaw0auuwDQ7ZkoMDm_dPE0vn9">https://www.microsoft.com/en-us/security/business/security-101/what-is-zero-trust-arc</a></span><span
+      class="c6">&nbsp;</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/business/security-101/what-is-zero-trust-architecture&amp;sa=D&amp;source=editors&amp;ust=1733983630294257&amp;usg=AOvVaw1z7sllpGkyFz3hjeqaop_6">hitecture</a></span>
+  </p>
+  <p class="c15"><span class="c6 c9"></span></p>
+  <p class="c25 c128"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_4-0" start="23">
+    <li class="c98 c144"><span class="c8">Savvycom Security Team, &quot;Key Strategies For Zero Trust
+        Implementation,&quot; Savvycom Software, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://savvycomsoftware.com/blog/zero-trust-implementation/&amp;sa=D&amp;source=editors&amp;ust=1733983630294601&amp;usg=AOvVaw3tjCXySMm15JI31bANjYAa">https://savvycomsoftware.com/blog/zero-trust-implementation/</a></span>
+    </li>
+  </ol>
+  <p class="c43 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_4-0" start="24">
+    <li class="c68 c83"><span class="c2">Microsoft Security Team, &quot;Respond to trending threats and adopt zero-trust
+        with Exposure Management,&quot; Microsoft Tech Community, 2024. [Online]. Available:</span></li>
+  </ol><a id="id.2s8eyo1"></a>
+  <p class="c108 c68"><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/respond-to-trending-threats-and-adopt-zero-trust-with-exposure/ba-p/4130133&amp;sa=D&amp;source=editors&amp;ust=1733983630295022&amp;usg=AOvVaw1xWQiwqW8Dt3ttSWKeSSW1">https://techcommunity.microsoft.com/t5/security-compliance-and-identity/respond-to-t</a></span><span
+      class="c6">&nbsp;</span><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/respond-to-trending-threats-and-adopt-zero-trust-with-exposure/ba-p/4130133&amp;sa=D&amp;source=editors&amp;ust=1733983630295259&amp;usg=AOvVaw330rm-WqqTJnUyOsUfhCqF">rending-threats-and-adopt-zero-trust-with-exposure/ba-p/4130133</a></span>
+  </p>
+  <p class="c49 c25"><span class="c14 c9"></span></p>
+  <ol class="c13 lst-kix_list_5-0 start" start="25">
+    <li class="c94"><span class="c8">Fortinet Security Team, &quot;Overcome Zero-Trust Implementation Challenges,&quot;
+        Fortinet CISO Collective, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.fortinet.com/blog/ciso-collective/zero-trust-implementation-challenges-to-overcome&amp;sa=D&amp;source=editors&amp;ust=1733983630295634&amp;usg=AOvVaw1oCvKoyN8AvjL9QGF90zGK">https://www.fortinet.com/blog/ciso-collective/zero-trust-implementation-challenges-to-overcome</a></span>
+    </li>
+  </ol>
+  <p class="c76 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_5-0" start="26">
+    <li class="c94"><span class="c8">M. Pratt, &quot;7 steps for implementing zero trust, with real-life examples,&quot;
+        TechTarget SearchSecurity, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.techtarget.com/searchsecurity/feature/How-to-implement-zero-trust-security-from-people-who-did-it&amp;sa=D&amp;source=editors&amp;ust=1733983630295983&amp;usg=AOvVaw1aAW6XUV3d35kvGqw6E5Qi">https://www.techtarget.com/searchsecurity/feature/How-to-implement-zero-trust-secu</a></span><span
+        class="c6">&nbsp;</span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.techtarget.com/searchsecurity/feature/How-to-implement-zero-trust-security-from-people-who-did-it&amp;sa=D&amp;source=editors&amp;ust=1733983630296249&amp;usg=AOvVaw0w2i7WCIUvei62L3tJWllH">rity-from-people-who-did-it</a></span>
+    </li>
+  </ol>
+  <p class="c76 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_5-0" start="27">
+    <li class="c94"><span class="c8">Microsoft Security Team, &quot;Zero Trust Adoption Report: How does your
+        organization compare?,&quot; Microsoft Security Blog, Jul. 28, 2021. [Online]. Available: </span><span
+        class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.microsoft.com/en-us/security/blog/2021/07/28/zero-trust-adoption-report-how-does-your-organization-compare/&amp;sa=D&amp;source=editors&amp;ust=1733983630296865&amp;usg=AOvVaw2RvY2UnBKsX2AxBvobA2--">https://www.microsoft.com/en-us/security/blog/2021/07/28/zero-trust-adoption-report-how-does-your-organization-compare/</a></span>
+    </li>
+  </ol>
+  <p class="c76 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_5-0" start="28">
+    <li class="c64"><span class="c8">Microsoft Security Team, &quot;Zero Trust Model - Modern Security
+        Architecture,&quot; Microsoft Security UK, 2023. [Online]. Available: </span><span class="c6"><a class="c17"
+          href="https://www.google.com/url?q=https://www.microsoft.com/en-gb/security/business/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630297348&amp;usg=AOvVaw3cUYe1zP-PyQmf14jEryiy">https://www.microsoft.com/en-gb/security/business/zero-trust</a></span>
+    </li>
+  </ol>
+  <p class="c43 c25"><span class="c6 c9"></span></p>
+  <ol class="c13 lst-kix_list_5-0" start="29">
+    <li class="c64"><span class="c8">Microsoft Security Team, &quot;Zero Trust Model - Modern Security
+        Architecture,&quot; Microsoft Security South Africa, 2023. [Online]. Available: </span><span class="c6"><a
+          class="c17"
+          href="https://www.google.com/url?q=https://www.microsoft.com/en-za/security/business/zero-trust&amp;sa=D&amp;source=editors&amp;ust=1733983630297813&amp;usg=AOvVaw1M1qhun1H5aezIQPsEGRyN">https://www.microsoft.com/en-za/security/business/zero-trust</a></span>
+    </li>
+  </ol>
+  <p class="c105 c25"><span class="c6 c9"></span></p>
+  <p class="c105"><span class="c6">[30] </span><span class="c2">NIST Special Publication 800-207: &quot;Zero Trust
+      Architecture&quot; by Scott Rose, Oliver Borchert, Stu Mitchell, and Sean Connelly (2020). </span></p>
+  <p class="c105"><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf&amp;sa=D&amp;source=editors&amp;ust=1733983630298374&amp;usg=AOvVaw1k2GyIDZysPt49N_LrG-Qb">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf</a></span>
+  </p>
+  <p class="c105 c25"><span class="c6 c9"></span></p>
+  <p class="c105"><span class="c6">[31] </span><span class="c2">He, Yuanhang, et al. &quot;A survey on zero trust
+      architecture: Challenges and future trends.&quot; (2022). </span></p>
+  <p class="c105"><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://onlinelibrary.wiley.com/doi/full/10.1155/2022/6476274&amp;sa=D&amp;source=editors&amp;ust=1733983630298719&amp;usg=AOvVaw0mdTUcUZ1UYBrO4Ix1ESPG">https://onlinelibrary.wiley.com/doi/full/10.1155/2022/6476274</a></span>
+  </p>
+  <p class="c25 c105"><span class="c2"></span></p>
+  <p class="c105"><span class="c6">[32] </span><span class="c2">Syed, Naeem Firdous, et al. &quot;Zero trust
+      architecture (zta): A comprehensive survey.&quot; (2022).</span></p>
+  <p class="c105"><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://ieeexplore.ieee.org/abstract/document/9773102&amp;sa=D&amp;source=editors&amp;ust=1733983630299037&amp;usg=AOvVaw32x2rfLFTRJPvU7DAwI4K3">https://ieeexplore.ieee.org/abstract/document/9773102</a></span>
+  </p>
+  <p class="c105 c25"><span class="c2"></span></p>
+  <p class="c105"><span class="c6">[33] </span><span class="c30">Kerman, Alper, et al. &quot;Implementing a zero trust
+      architecture.&quot; </span><span class="c30 c44">National Institute of Standards and Technology</span><span
+      class="c2">&nbsp;2020 (2020): 17-17.</span></p>
+  <p class="c105"><span class="c6"><a class="c17"
+        href="https://www.google.com/url?q=https://www.nccoe.nist.gov/sites/default/files/2022-12/zta-nist-sp-1800-35e-preliminary-draft.pdf&amp;sa=D&amp;source=editors&amp;ust=1733983630299448&amp;usg=AOvVaw1auqZD4eaJtkMaUWc0UXxz">https://www.nccoe.nist.gov/sites/default/files/2022-12/zta-nist-sp-1800-35e-preliminary-draft.pdf</a></span>
+  </p>
+  <p class="c105 c25"><span class="c2"></span></p>
+  <p class="c105 c25"><span class="c6 c9"></span></p>
+  <p class="c5"><span
+      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 698.67px; height: 2.67px;"><img
+        alt="" src="images/image1.png"
+        style="width: 698.67px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+</body>
+
+</html>
